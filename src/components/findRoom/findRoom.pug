@@ -1,0 +1,32 @@
+.find-room__wrapper 
+    .find-room__form 
+        .find-room__title Найдём номера под ваши пожелания
+        form.find-room__wrapper
+            .find-room__item 
+                .find-room__subtitle Прибытие
+                .arrow__down.absolute
+                input(
+                    type='select'
+                    name='arrival'
+                    placeholder='ДД.ММ.ГГГГ'
+                 )
+            .find-room__item 
+                .find-room__subtitle Выезд
+                .arrow__down.absolute
+                input(
+                    type='select'
+                    name='departure'
+                    placeholder='ДД.ММ.ГГГГ'
+                )
+            .find__room__item.width 
+                .find-room__subtitle Гости
+                .arrow__down.absolute-max
+                input(
+                    type='select'
+                    name='numberguests'
+                    placeholder='Сколько гостей'
+                )
+        button.find-room__btn Подобрать номер
+           
+.find-room__text.first Лучшие номера для вашей работы, 
+.find-room__text.end отдыха и просто вдохновения

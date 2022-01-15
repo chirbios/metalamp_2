@@ -1,0 +1,20 @@
+.navigation {
+    &__logo {
+        padding: 15px 0 15px 0;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__items {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__item {
+        padding-left: 20px;
+    }
+}

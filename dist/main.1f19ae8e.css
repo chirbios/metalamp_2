@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("/Montserrat-Bold.70d570c7.eot");
+  src: local("☺"), url("/Montserrat-Bold.73e94c2c.woff") format("woff"), url("/Montserrat-Bold.f3410305.ttf") format("truetype"), url("/Montserrat-Bold.0fff2121.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("/Montserrat-Regular.21b801b8.eot");
+  src: local("☺"), url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.44e710c1.ttf") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.navigation__logo {
+  padding: 15px 0 15px 0;
+}
+.navigation__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation__items {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.navigation__item {
+  padding-left: 20px;
+}
+
+button.btn__dark {
+  margin-left: 20px;
+  padding: 10px 20px 11px 19px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+button.btn__white {
+  margin-left: 20px;
+  background: #fff;
+  padding: 9px 20px 10px 20px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  border: 2px solid #BC9CFF;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.arrow__down {
+  margin: 0 10px 0 5px;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid rgba(31, 32, 65, 0.5);
+  border-right: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg) translate(-4px, -1px);
+}
+
+.arrow {
+  background: url("/arrow_forward.9a1d52d1.png");
+}
+
+.find-room {
+  padding-top: 70px;
+  background: url("/bg_landingPage.6144e723.jpg") no-repeat center/cover;
+}
+.find-room__form {
+  padding: 40px 30px 30px 30px;
+  max-width: 374px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.find-room__wrapper {
+  display: grid;
+  column-gap: 20px;
+  justify-content: space-between;
+  grid-template-columns: 45% 45%;
+}
+.find-room__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+}
+.find-room__subtitle {
+  padding-top: 21px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.find-room input {
+  margin-top: 6px;
+  padding: 13px 15px 13px 15px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.find-room button.find-room__btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px 22px 15px 18px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+}
+.find-room .width {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.find-room__text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.75);
+}
+.find-room .find-room__text.first {
+  margin-top: 320px;
+}
+.find-room .find-room__text.end {
+  padding-bottom: 18px;
+}
+.find-room .absolute {
+  position: absolute;
+  transform: rotate(135deg) translate(-64px, -94px);
+}
+.find-room .absolute-max {
+  position: absolute;
+  transform: rotate(135deg) translate(-184px, -216px);
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
