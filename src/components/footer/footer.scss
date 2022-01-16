@@ -1,0 +1,64 @@
+.footer {
+    &__top {
+        padding-top: 104px;
+        display: flex;
+        justify-content: space-between;
+        &_descr {
+            max-width: 260px;
+            padding-top: 20px;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+        }
+        &_title {
+            padding-bottom: 21px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+        }
+        &_subtitle {
+            padding-top: 20px;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(31, 32, 65, 0.5);
+        }
+        &_subscription {
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(31, 32, 65, 0.75);
+        }
+        &_form input{
+            margin-top: 20px;
+            padding: 12px 0 12px 15px;
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid rgba(31, 32, 65, 0.25);
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+        &_item.last {
+            padding-right: 15px;
+        }
+    }
+    &__bot {
+        padding-top: 23px;
+        padding-bottom: 23px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            padding-left: 20px;
+        }
+    }
+    &__bot_item {
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+}
+.footer-line {
+    margin-top: 101px;
+    border-top: 1px solid rgba(31, 32, 65, 0.5);;
+}
