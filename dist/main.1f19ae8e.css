@@ -134,6 +134,7 @@ button.btn__white {
   border-radius: 4px;
 }
 .find-room button.find-room__btn {
+  cursor: pointer;
   margin-top: 30px;
   width: 100%;
   padding: 14px 22px 15px 18px;
@@ -165,11 +166,16 @@ button.btn__white {
 }
 .find-room .absolute {
   position: absolute;
-  transform: rotate(135deg) translate(-64px, -94px);
+  transform: rotate(135deg) translate(-64px, -91px);
 }
 .find-room .absolute-max {
   position: absolute;
-  transform: rotate(135deg) translate(-184px, -216px);
+  transform: rotate(135deg) translate(-183px, -213px);
+}
+
+.arrow__img_white {
+  position: absolute;
+  transform: translate(281px, 43px);
 }
 
 .footer__top {
@@ -199,6 +205,7 @@ button.btn__white {
   color: rgba(31, 32, 65, 0.5);
 }
 .footer__top_subscription {
+  padding-right: 15px;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
@@ -211,9 +218,6 @@ button.btn__white {
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
-}
-.footer__top_item.last {
-  padding-right: 15px;
 }
 .footer__bot {
   padding-top: 23px;
@@ -234,6 +238,11 @@ button.btn__white {
 .footer-line {
   margin-top: 101px;
   border-top: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.arrow__img {
+  transform: translate(226px, 32px);
+  position: absolute;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

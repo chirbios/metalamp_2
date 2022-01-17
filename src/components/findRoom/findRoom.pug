@@ -4,17 +4,15 @@
         form.find-room__wrapper
             .find-room__item 
                 .find-room__subtitle Прибытие
-                .arrow__down.absolute
                 input(
-                    type='select'
+                    type='date'
                     name='arrival'
                     placeholder='ДД.ММ.ГГГГ'
                  )
             .find-room__item 
                 .find-room__subtitle Выезд
-                .arrow__down.absolute
                 input(
-                    type='select'
+                    type='date'
                     name='departure'
                     placeholder='ДД.ММ.ГГГГ'
                 )
@@ -22,10 +20,12 @@
                 .find-room__subtitle Гости
                 .arrow__down.absolute-max
                 input(
-                    type='select'
+                    type='text'
                     name='numberguests'
                     placeholder='Сколько гостей'
                 )
+        .arrow__img_white 
+            img(src="./img/arrow_white.svg", alt="arrow_white")
         button.find-room__btn Подобрать номер
            
 .find-room__text.first Лучшие номера для вашей работы, 

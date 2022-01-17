@@ -25,6 +25,7 @@
             color: rgba(31, 32, 65, 0.5);
         }
         &_subscription {
+            padding-right: 15px;
             font-size: 14px;
             line-height: 24px;
             color: rgba(31, 32, 65, 0.75);
@@ -37,9 +38,6 @@
             border: 1px solid rgba(31, 32, 65, 0.25);
             box-sizing: border-box;
             border-radius: 4px;
-        }
-        &_item.last {
-            padding-right: 15px;
         }
     }
     &__bot {
@@ -61,4 +59,8 @@
 .footer-line {
     margin-top: 101px;
     border-top: 1px solid rgba(31, 32, 65, 0.5);;
+}
+.arrow__img {
+    transform: translate(226px, 32px);
+    position: absolute;
 }

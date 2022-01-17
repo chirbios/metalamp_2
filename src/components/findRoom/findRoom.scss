@@ -40,6 +40,7 @@
         border-radius: 4px;
     }
     button.find-room__btn {
+        cursor: pointer;
         margin-top: 30px;
         width: 100%;
         padding: 14px 22px 15px 18px;
@@ -71,10 +72,14 @@
     }
     .absolute {
         position: absolute;
-        transform: rotate(135deg) translate(-64px, -94px);
+        transform: rotate(135deg) translate(-64px, -91px);
     }
     .absolute-max {
         position: absolute;
-        transform: rotate(135deg) translate(-184px, -216px);
+        transform: rotate(135deg) translate(-183px, -213px);
     }
+}
+.arrow__img_white {
+    position: absolute;
+    transform: translate(281px, 43px);
 }
