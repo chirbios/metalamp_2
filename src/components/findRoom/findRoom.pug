@@ -1,3 +1,4 @@
+
 .find-room__wrapper 
     .find-room__form 
         .find-room__title Найдём номера под ваши пожелания
@@ -5,22 +6,23 @@
             .find-room__item 
                 .find-room__subtitle Прибытие
                 input(
-                    type='date'
-                    name='arrival'
+                    type='text'
+                    id='arrival'
                     placeholder='ДД.ММ.ГГГГ'
                  )
             .find-room__item 
                 .find-room__subtitle Выезд
                 input(
-                    type='date'
-                    name='departure'
+                    type='text'
+                    id='departure'
                     placeholder='ДД.ММ.ГГГГ'
                 )
             .find__room__item.width 
-                .find-room__subtitle Гости
+                .find-room__subtitle.max Гости
                 .arrow__down.absolute-max
                 input(
                     type='text'
+                    id='numberguests'
                     name='numberguests'
                     placeholder='Сколько гостей'
                 )
