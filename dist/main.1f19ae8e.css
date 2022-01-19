@@ -311,4 +311,21 @@ tr * {
   position: absolute;
 }
 
+.room-details__bg {
+  height: 485px;
+  background: url("/Group 9.b522bcb3.jpg") no-repeat center/cover;
+}
+.room-details__wrapper {
+  margin-top: 70px;
+  display: grid;
+  column-gap: 70px;
+  grid-template-columns: 61% 33%;
+}
+.room-details__comments {
+  margin-top: 30px;
+}
+.room-details__rules {
+  margin-top: 30px;
+}
+
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
