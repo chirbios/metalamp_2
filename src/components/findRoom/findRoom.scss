@@ -1,9 +1,9 @@
 .find-room {
     padding-top: 70px;
-    background: url('/img/bg_landingPage.jpg') no-repeat center/cover;
+    background: url('/img/bg_landingPage.jpg') no-repeat center / 100% ; //  no-repeat center bottom
     &__form {
-        padding: 40px 30px 30px 30px;
-        max-width: 374px;
+        padding: 38px 30px 29px 30px;
+        max-width: 380px;
         background: #FFFFFF;
         border: 1px solid rgba(0, 0, 0, 0.12);
         box-sizing: border-box;
@@ -12,9 +12,8 @@
     }
     &__wrapper {
         display: grid;
-        column-gap: 20px;
         justify-content: space-between;
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 47% 47%;
     }
     &__title {
         font-weight: 700;
@@ -31,19 +30,24 @@
         color: #1F2041;
     }
     input {
+        font-size: 14px;
         margin-top: 6px;
-        padding: 13px 15px 13px 15px;
+        padding: 12px 15px 13px 14px;
         width: 100%;
         background: #FFFFFF;
         border: 1px solid rgba(31, 32, 65, 0.25);
         box-sizing: border-box;
         border-radius: 4px;
     }
+    #numberguests {
+        margin-top: 5px;
+        padding: 11px 0px 12px 13px;
+    }
     button.find-room__btn {
         cursor: pointer;
         margin-top: 30px;
         width: 100%;
-        padding: 14px 22px 15px 18px;
+        padding: 14px 21px 15px 17px;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
@@ -76,7 +80,7 @@
     }
     .absolute-max {
         position: absolute;
-        transform: rotate(135deg) translate(-183px, -213px);
+        transform: rotate(135deg) translate(-188px, -217px);
     }
 }
 .find-room__subtitle.max {
@@ -93,11 +97,11 @@
 .arrow__img_white {
     cursor: pointer;
     position: absolute;
-    transform: translate(281px, 43px);
+    transform: translate(288px, 43px);
 }
 .ui-datepicker-trigger {
-    transform: translate(107px, -35px);
-    width: 20px;
+    transform: translate(114px, -34px);
+    width: 17px;
 	margin-left: 5px;
 	position: relative;
 	top: 3px;

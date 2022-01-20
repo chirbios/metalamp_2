@@ -9,10 +9,65 @@
         column-gap: 70px;
         grid-template-columns: 61% 33%;
     }
+    &__info {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+        color: #1F2041;
+    }
     &__comments {
         margin-top: 30px;
     }
     &__rules {
         margin-top: 30px;
     }
+    &__pluses_item {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 48px 233px;
+        column-gap: 10px;
+    }
+    &__pluses_img {
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    &__pluses_title {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__pluses_subtitle {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    
 }
+.room-details__points_cicrle_a {
+    width: 59px;
+    height: 121px;
+    border: 4px solid red;
+    border-radius: 100% 0 0 100%/50% 0 0 50%;
+    border-right: none;
+}
+.room-details__points_cicrle_b {
+    width: 59px;
+    height: 59px;
+    border: 4px solid red;
+    border-radius: 0% 100% 0% 100% / 100% 100% 0% 0% ;
+    border-left: none;
+    border-bottom: none;
+}
+.room-details__points_cicrle_c {
+    width: 59px;
+    height: 59px;
+    border: 4px solid red;
+    border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%  ;
+    border-left: none;
+    border-top: none;
+}
+  
+  

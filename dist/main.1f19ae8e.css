@@ -31,7 +31,7 @@ body {
   font-style: normal;
 }
 .navigation__logo {
-  padding: 15px 0 15px 0;
+  padding: 17px 0 12px 0;
 }
 .navigation__wrapper {
   display: flex;
@@ -42,16 +42,15 @@ body {
   display: flex;
   align-items: center;
   font-size: 14px;
-  line-height: 17px;
   color: rgba(31, 32, 65, 0.5);
 }
 .navigation__item {
-  padding-left: 20px;
+  padding-left: 21px;
 }
 
 button.btn__dark {
   margin-left: 20px;
-  padding: 10px 20px 11px 19px;
+  padding: 10px 21px 11px 19px;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -67,7 +66,7 @@ button.btn__dark {
 button.btn__white {
   margin-left: 20px;
   background: #fff;
-  padding: 9px 20px 10px 20px;
+  padding: 8px 18px 9px 18px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -84,7 +83,7 @@ button.btn__white {
   height: 7px;
   border-top: 2px solid rgba(31, 32, 65, 0.5);
   border-right: 2px solid rgba(31, 32, 65, 0.5);
-  transform: rotate(135deg) translate(-4px, -1px);
+  transform: rotate(135deg) translate(-2px, -2px);
 }
 
 .arrow {
@@ -93,11 +92,11 @@ button.btn__white {
 
 .find-room {
   padding-top: 70px;
-  background: url("/bg_landingPage.6144e723.jpg") no-repeat center/cover;
+  background: url("/bg_landingPage.6144e723.jpg") no-repeat center/100%;
 }
 .find-room__form {
-  padding: 40px 30px 30px 30px;
-  max-width: 374px;
+  padding: 38px 30px 29px 30px;
+  max-width: 380px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -106,9 +105,8 @@ button.btn__white {
 }
 .find-room__wrapper {
   display: grid;
-  column-gap: 20px;
   justify-content: space-between;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 47% 47%;
 }
 .find-room__title {
   font-weight: 700;
@@ -125,19 +123,24 @@ button.btn__white {
   color: #1F2041;
 }
 .find-room input {
+  font-size: 14px;
   margin-top: 6px;
-  padding: 13px 15px 13px 15px;
+  padding: 12px 15px 13px 14px;
   width: 100%;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
 }
+.find-room #numberguests {
+  margin-top: 5px;
+  padding: 11px 0px 12px 13px;
+}
 .find-room button.find-room__btn {
   cursor: pointer;
   margin-top: 30px;
   width: 100%;
-  padding: 14px 22px 15px 18px;
+  padding: 14px 21px 15px 17px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -170,7 +173,7 @@ button.btn__white {
 }
 .find-room .absolute-max {
   position: absolute;
-  transform: rotate(135deg) translate(-183px, -213px);
+  transform: rotate(135deg) translate(-188px, -217px);
 }
 
 .find-room__subtitle.max {
@@ -189,12 +192,12 @@ button.btn__white {
 .arrow__img_white {
   cursor: pointer;
   position: absolute;
-  transform: translate(281px, 43px);
+  transform: translate(288px, 43px);
 }
 
 .ui-datepicker-trigger {
-  transform: translate(107px, -35px);
-  width: 20px;
+  transform: translate(114px, -34px);
+  width: 17px;
   margin-left: 5px;
   position: relative;
   top: 3px;
@@ -321,11 +324,66 @@ tr * {
   column-gap: 70px;
   grid-template-columns: 61% 33%;
 }
+.room-details__info {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+}
 .room-details__comments {
   margin-top: 30px;
 }
 .room-details__rules {
   margin-top: 30px;
+}
+.room-details__pluses_item {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 48px 233px;
+  column-gap: 10px;
+}
+.room-details__pluses_img {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.room-details__pluses_title {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__pluses_subtitle {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.room-details__points_cicrle_a {
+  width: 59px;
+  height: 121px;
+  border: 4px solid red;
+  border-radius: 100% 0 0 100%/50% 0 0 50%;
+  border-right: none;
+}
+
+.room-details__points_cicrle_b {
+  width: 59px;
+  height: 59px;
+  border: 4px solid red;
+  border-radius: 0% 100% 0% 100%/100% 100% 0% 0%;
+  border-left: none;
+  border-bottom: none;
+}
+
+.room-details__points_cicrle_c {
+  width: 59px;
+  height: 59px;
+  border: 4px solid red;
+  border-radius: 100% 0% 100% 0%/0% 0% 100% 100%;
+  border-left: none;
+  border-top: none;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
