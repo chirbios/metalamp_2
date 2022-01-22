@@ -335,9 +335,6 @@ tr * {
 .room-details__comments {
   margin-top: 30px;
 }
-.room-details__rules {
-  margin-top: 30px;
-}
 .room-details__pluses_item {
   padding-top: 20px;
   display: grid;
@@ -446,7 +443,7 @@ tr * {
   grid-template-columns: 50px auto;
 }
 .room-details__comments_img img {
-  transform: translate(-23px, -6px);
+  transform: translate(-23px, -11px);
 }
 .room-details__comments_name {
   font-weight: 700;
@@ -467,6 +464,76 @@ tr * {
 }
 .room-details__comments_right {
   padding-left: 5px;
+}
+.room-details__comments_post {
+  cursor: pointer;
+  transform: translate(1px, -42px);
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.room-details__comments_likes {
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.25);
+}
+.room-details__rules {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+.room-details__rules_title {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+}
+.room-details__rules_text {
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.heart {
+  background-color: #1f2041;
+  display: inline-block;
+  margin: 0px 0px 15px 0px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  left: 10%;
+  top: 45%;
+  height: 5px;
+  width: 5px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #1f2041;
+  border-radius: 50%;
+  height: 5px;
+  position: absolute;
+  width: 5px;
+}
+
+.heart:before {
+  top: -3px;
+  left: 0;
+}
+
+.heart:after {
+  left: 3px;
+  top: 0;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
