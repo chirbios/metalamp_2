@@ -325,6 +325,8 @@ tr * {
   grid-template-columns: 61% 33%;
 }
 .room-details__info {
+  grid-column-start: 1;
+  grid-column-end: 4;
   font-weight: 700;
   font-size: 19px;
   line-height: 23px;
@@ -359,31 +361,112 @@ tr * {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
 }
-
+.room-details__points {
+  display: grid;
+  grid-template-columns: 65px auto auto;
+  grid-template-rows: 45px 63px 63px;
+}
+.room-details__points_wrapper {
+  margin-top: 30px;
+}
+.room-details__points_vote {
+  transform: translate(-192px, -23px);
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #BC9CFF;
+}
+.room-details__points_verdict {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__points_vote-mini {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
 .room-details__points_cicrle_a {
-  width: 59px;
-  height: 121px;
-  border: 4px solid red;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width: 56px;
+  height: 117px;
+  border: 4px solid orange;
   border-radius: 100% 0 0 100%/50% 0 0 50%;
   border-right: none;
 }
-
 .room-details__points_cicrle_b {
-  width: 59px;
-  height: 59px;
-  border: 4px solid red;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  width: 56px;
+  height: 56px;
+  border: 4px solid #BC9CFF;
   border-radius: 0% 100% 0% 100%/100% 100% 0% 0%;
   border-left: none;
   border-bottom: none;
 }
-
 .room-details__points_cicrle_c {
-  width: 59px;
-  height: 59px;
-  border: 4px solid red;
+  margin-top: 2px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  width: 56px;
+  height: 56px;
+  border: 4px solid #6FCF97;
   border-radius: 100% 0% 100% 0%/0% 0% 100% 100%;
   border-left: none;
   border-top: none;
+}
+.room-details__rating {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.room-details__comments_subtitle {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+}
+.room-details__comments_title {
+  display: flex;
+  justify-content: space-between;
+}
+.room-details__comments_reviews {
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.room-details__comments_item {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+.room-details__comments_img img {
+  transform: translate(-23px, -6px);
+}
+.room-details__comments_name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__comments_activity {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__comments_content {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__comments_right {
+  padding-left: 5px;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
