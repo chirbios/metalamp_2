@@ -1,0 +1,73 @@
+.search-room {
+    &__subtitle {
+        padding-top: 30px;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1F2041;
+    }
+    &__item {
+        margin-top: 20px;
+        max-width: 270px;
+    }
+    &__price {
+        padding: 16px 17px 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__stars {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__stars_wrapper {
+        border-top: 1px solid rgba(31, 32, 65, 0.1);;
+        padding-top: 8px;
+        margin: 8px 20px 20px 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__number {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #1F2041;
+    }
+    &__room-number {
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 23px;
+        color: #1F2041;
+    }
+    &__type {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #BC9CFF;
+    }
+    &__value {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__day {
+        font-size: 12px;
+        line-height: 18px;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__reviews {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.5);
+    }
+    &__reviews_bold {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.5);
+    }
+}

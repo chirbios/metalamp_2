@@ -172,20 +172,37 @@
     &__rules {
         display: grid;
         margin-top: 30px;
+        column-gap: 70px;
         grid-template-columns: auto auto;
         justify-content: space-between;
     }
     &__rules_title {
+        padding-bottom: 10px;
         font-weight: 700;
         font-size: 19px;
         line-height: 23px;
         color: #1F2041;
     }
     &__rules_text {
-        padding-top: 20px;
+        padding-top: 10px;
         font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
+    }
+    &__rules_rule {
+        padding-top: 10px;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__rules_rule::before {
+        content: '';
+        position: absolute;
+        transform: translate(-20px, 7px);
+        height: 10px;
+        width: 10px;
+        background: rgba(31, 32, 65, 0.25);
+        border-radius: 50%;
     }
 }
 .heart {

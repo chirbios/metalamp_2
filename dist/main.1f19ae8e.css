@@ -487,20 +487,37 @@ tr * {
 .room-details__rules {
   display: grid;
   margin-top: 30px;
+  column-gap: 70px;
   grid-template-columns: auto auto;
   justify-content: space-between;
 }
 .room-details__rules_title {
+  padding-bottom: 10px;
   font-weight: 700;
   font-size: 19px;
   line-height: 23px;
   color: #1F2041;
 }
 .room-details__rules_text {
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+}
+.room-details__rules_rule {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.room-details__rules_rule::before {
+  content: "";
+  position: absolute;
+  transform: translate(-20px, 7px);
+  height: 10px;
+  width: 10px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
 }
 
 .heart {
@@ -534,6 +551,78 @@ tr * {
 .heart:after {
   left: 3px;
   top: 0;
+}
+
+.search-room__subtitle {
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+}
+.search-room__item {
+  margin-top: 20px;
+  max-width: 270px;
+}
+.search-room__price {
+  padding: 16px 17px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-room__stars {
+  display: flex;
+  justify-content: space-between;
+}
+.search-room__stars_wrapper {
+  border-top: 1px solid rgba(31, 32, 65, 0.1);
+  padding-top: 8px;
+  margin: 8px 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-room__number {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1F2041;
+}
+.search-room__room-number {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+}
+.search-room__type {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+.search-room__value {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.search-room__day {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.search-room__reviews {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.5);
+}
+.search-room__reviews_bold {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.5);
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
