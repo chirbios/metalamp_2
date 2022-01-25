@@ -16,6 +16,13 @@
         align-items: center;
         justify-content: space-between;
     }
+    &__price_left {
+        display: flex;
+        align-items: center;
+    }
+    &__price_right {
+        display: flex;
+    }
     &__stars {
         display: flex;
         justify-content: space-between;
@@ -28,12 +35,15 @@
         justify-content: space-between;
     }
     &__number {
+        padding-right: 3px;
         font-weight: bold;
         font-size: 14px;
         line-height: 17px;
         color: #1F2041;
     }
     &__room-number {
+        padding-right: 5px;
+        padding-bottom: 3px;
         font-weight: bold;
         font-size: 19px;
         line-height: 23px;
@@ -47,6 +57,7 @@
         color: #BC9CFF;
     }
     &__value {
+        padding-right: 5px;
         font-weight: bold;
         font-size: 14px;
         line-height: 18px;
@@ -57,6 +68,10 @@
         line-height: 18px;
         color: rgba(31, 32, 65, 0.5);
     }
+    &__reviews_wrapper {
+        display: flex;
+        padding-top: 3px;
+    }
     &__reviews {
         font-size: 14px;
         line-height: 18px;
@@ -64,6 +79,7 @@
         color: rgba(31, 32, 65, 0.5);
     }
     &__reviews_bold {
+        padding-right: 5px;
         font-weight: bold;
         font-size: 14px;
         line-height: 18px;

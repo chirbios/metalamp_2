@@ -52,7 +52,7 @@
         margin-top: 30px;
     }
     &__points_vote {
-        transform: translate(-192px, -23px);
+        transform: translate(-189px, -23px);
         text-align: center;
         font-weight: 700;
         font-size: 24px;
@@ -150,31 +150,40 @@
     &__comments_right {
         padding-left: 5px;
     }
+    &__comments_likes {
+        padding-left: 5px;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+    }
     &__comments_post {
         cursor: pointer;
         transform: translate(1px, -42px);
         width: 40px;
         height: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         background: #FFFFFF;
         border: 1px solid rgba(31, 32, 65, 0.25);
         box-sizing: border-box;
         border-radius: 10px;
-    }
-    &__comments_likes {
-        font-size: 10px;
-        line-height: 12px;
-        text-align: center;
         color: rgba(31, 32, 65, 0.25);
     }
+    &__comments_post.active {
+        border: 1px solid #BC9CFF;
+        color: #BC9CFF;
+    }
+    
     &__rules {
         display: grid;
         margin-top: 30px;
         column-gap: 70px;
         grid-template-columns: auto auto;
         justify-content: space-between;
+    }
+    &__rules_left {
+        padding-left: 20px;
     }
     &__rules_title {
         padding-bottom: 10px;
@@ -205,34 +214,7 @@
         border-radius: 50%;
     }
 }
-.heart {
-    background-color: rgba(31, 32, 65);
-    display: inline-block;
-    margin: 0px 0px 15px 0px;
-    position: relative;
-    top: 0;
-    transform: rotate(-45deg); // поворачиваем на -45 градусов
-    left: 10%; top: 45%; // смещаем позицию слева и сверху по 45%
-    height: 5px; // квадрат
-    width: 5px;
-  }
-  .heart:before,
-  .heart:after {
-    content: "";
-    background-color: rgba(31, 32, 65);
-    border-radius: 50%; // квадрат со скругленными углами 50% = круг
-    height: 5px;
-    position: absolute;
-    width: 5px;
-  }
-  .heart:before {
-    top: -3px;
-    left: 0;
-  }
-  .heart:after {
-    left: 3px;
-    top: 0;
-  }
+
 
 
   

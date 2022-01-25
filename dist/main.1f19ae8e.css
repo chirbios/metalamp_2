@@ -30,6 +30,37 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
 .navigation__logo {
   padding: 17px 0 12px 0;
 }
@@ -83,11 +114,7 @@ button.btn__white {
   height: 7px;
   border-top: 2px solid rgba(31, 32, 65, 0.5);
   border-right: 2px solid rgba(31, 32, 65, 0.5);
-  transform: rotate(135deg) translate(-2px, -2px);
-}
-
-.arrow {
-  background: url("/arrow_forward.9a1d52d1.png");
+  transform: translate(-2px, -2px);
 }
 
 .find-room {
@@ -192,7 +219,7 @@ button.btn__white {
 .arrow__img_white {
   cursor: pointer;
   position: absolute;
-  transform: translate(288px, 43px);
+  transform: translate(283px, 40px);
 }
 
 .ui-datepicker-trigger {
@@ -208,6 +235,7 @@ button.btn__white {
 }
 
 .ui-datepicker .ui-datepicker-title {
+  padding-top: 15px;
   font-weight: 700;
   font-size: 19px;
   line-height: 23px;
@@ -245,6 +273,56 @@ tr * {
   border-radius: 22px;
   color: #fff;
   padding: 13px 0 13px 0;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+  border: none;
+}
+
+.ui-datepicker-prev span {
+  background-image: url(/arrow_back.81d852c4.svg) !important;
+  background-position: 0px 0px !important;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-datepicker-next span {
+  background-image: url(/arrow_forward.04b75f4b.svg) !important;
+  background-position: 0px 0px !important;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-datepicker .selected-start:not(.selected-end) a,
+.ui-datepicker .selected-end:not(.selected-start) a {
+  background: #F3FDD5;
+}
+
+.ui-datepicker .selected.first-of-month:not(.selected-start) a {
+  border-left: 2px dotted #D4E7F6;
+  padding-left: 1px;
+}
+
+.ui-datepicker .selected.last-of-month:not(.selected-end) a {
+  border-right: 2px dotted #D4E7F6;
+  padding-right: 1px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  top: 14px;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  top: 14px;
 }
 
 .footer__top {
@@ -367,7 +445,7 @@ tr * {
   margin-top: 30px;
 }
 .room-details__points_vote {
-  transform: translate(-192px, -23px);
+  transform: translate(-189px, -23px);
   text-align: center;
   font-weight: 700;
   font-size: 24px;
@@ -465,24 +543,29 @@ tr * {
 .room-details__comments_right {
   padding-left: 5px;
 }
+.room-details__comments_likes {
+  padding-left: 5px;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+}
 .room-details__comments_post {
   cursor: pointer;
   transform: translate(1px, -42px);
   width: 40px;
   height: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 10px;
-}
-.room-details__comments_likes {
-  font-size: 10px;
-  line-height: 12px;
-  text-align: center;
   color: rgba(31, 32, 65, 0.25);
+}
+.room-details__comments_post.active {
+  border: 1px solid #BC9CFF;
+  color: #BC9CFF;
 }
 .room-details__rules {
   display: grid;
@@ -490,6 +573,9 @@ tr * {
   column-gap: 70px;
   grid-template-columns: auto auto;
   justify-content: space-between;
+}
+.room-details__rules_left {
+  padding-left: 20px;
 }
 .room-details__rules_title {
   padding-bottom: 10px;
@@ -520,39 +606,6 @@ tr * {
   border-radius: 50%;
 }
 
-.heart {
-  background-color: #1f2041;
-  display: inline-block;
-  margin: 0px 0px 15px 0px;
-  position: relative;
-  top: 0;
-  transform: rotate(-45deg);
-  left: 10%;
-  top: 45%;
-  height: 5px;
-  width: 5px;
-}
-
-.heart:before,
-.heart:after {
-  content: "";
-  background-color: #1f2041;
-  border-radius: 50%;
-  height: 5px;
-  position: absolute;
-  width: 5px;
-}
-
-.heart:before {
-  top: -3px;
-  left: 0;
-}
-
-.heart:after {
-  left: 3px;
-  top: 0;
-}
-
 .search-room__subtitle {
   padding-top: 30px;
   font-weight: bold;
@@ -570,6 +623,13 @@ tr * {
   align-items: center;
   justify-content: space-between;
 }
+.search-room__price_left {
+  display: flex;
+  align-items: center;
+}
+.search-room__price_right {
+  display: flex;
+}
 .search-room__stars {
   display: flex;
   justify-content: space-between;
@@ -582,12 +642,15 @@ tr * {
   justify-content: space-between;
 }
 .search-room__number {
+  padding-right: 3px;
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
   color: #1F2041;
 }
 .search-room__room-number {
+  padding-right: 5px;
+  padding-bottom: 3px;
   font-weight: bold;
   font-size: 19px;
   line-height: 23px;
@@ -601,6 +664,7 @@ tr * {
   color: #BC9CFF;
 }
 .search-room__value {
+  padding-right: 5px;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -611,6 +675,10 @@ tr * {
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
 }
+.search-room__reviews_wrapper {
+  display: flex;
+  padding-top: 3px;
+}
 .search-room__reviews {
   font-size: 14px;
   line-height: 18px;
@@ -618,11 +686,44 @@ tr * {
   color: rgba(31, 32, 65, 0.5);
 }
 .search-room__reviews_bold {
+  padding-right: 5px;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
   text-align: right;
   color: rgba(31, 32, 65, 0.5);
+}
+
+span.material-icons-outlined {
+  font-family: "Material Icons";
+}
+
+.material-icons.md-10 {
+  font-size: 10px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.white {
+  color: white;
+}
+
+.material-icons.content {
+  color: #BC9CFF;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

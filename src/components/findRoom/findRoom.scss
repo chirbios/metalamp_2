@@ -97,7 +97,7 @@
 .arrow__img_white {
     cursor: pointer;
     position: absolute;
-    transform: translate(288px, 43px);
+    transform: translate(283px, 40px);
 }
 .ui-datepicker-trigger {
     transform: translate(114px, -34px);
@@ -111,6 +111,7 @@
     color: rgba(31, 32, 65, 0.75);
 }
 .ui-datepicker .ui-datepicker-title {
+    padding-top: 15px;
     font-weight: 700;
     font-size: 19px;
     line-height: 23px;
@@ -148,6 +149,51 @@ tr {
     color: #fff;
     padding: 13px 0 13px 0;
 }
+.ui-datepicker .ui-datepicker-buttonpane button {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+}
+.ui-datepicker .ui-datepicker-buttonpane{
+    border: none;
+}
 
+.ui-datepicker-prev span {
+    background-image: url(./img/arrow_back.svg) !important;
+    background-position: 0px 0px !important;
+    width: 100%;
+    height: 100%;
+}
 
+.ui-datepicker-next span {
+    background-image: url(./img/arrow_forward.svg) !important;
+    background-position: 0px 0px !important;
+    width: 100%;
+    height: 100%;
+}
 
+.ui-datepicker .selected-start:not(.selected-end) a,
+.ui-datepicker .selected-end:not(.selected-start) a {
+  background: #F3FDD5;
+}
+
+.ui-datepicker .selected.first-of-month:not(.selected-start) a {
+  border-left: 2px dotted #D4E7F6;
+  padding-left: 1px;
+}
+
+.ui-datepicker .selected.last-of-month:not(.selected-end) a {
+  border-right: 2px dotted #D4E7F6;
+  padding-right: 1px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    top: 14px
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    top: 14px
+}

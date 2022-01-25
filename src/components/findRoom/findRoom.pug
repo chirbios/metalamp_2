@@ -4,17 +4,20 @@
         .find-room__title Найдём номера под ваши пожелания
         form.find-room__wrapper
             .find-room__item 
+                div(id='date_range')
                 .find-room__subtitle Прибытие
                 input(
                     type='text'
-                    id='arrival'
+                    id='from'
+                    name='from'
                     placeholder='ДД.ММ.ГГГГ'
                  )
             .find-room__item 
                 .find-room__subtitle Выезд
                 input(
                     type='text'
-                    id='departure'
+                    id='to'
+                    name='to'
                     placeholder='ДД.ММ.ГГГГ'
                 )
             .find__room__item.width 
@@ -27,7 +30,7 @@
                     placeholder='Сколько гостей'
                 )
         .arrow__img_white 
-            img(src="./img/arrow_white.svg", alt="arrow_white")
+            span.material-icons-outlined.material-icons.md-24.white  arrow_forward
         button.find-room__btn Подобрать номер
            
 .find-room__text.first Лучшие номера для вашей работы, 

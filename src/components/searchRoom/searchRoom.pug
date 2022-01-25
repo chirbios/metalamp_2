@@ -2,6 +2,7 @@
     .container 
         .search-room_wrapper 
             .search-room__filter 
+                //use noUiSlider
             .search-room__rooms 
                 .search-room__subtitle Номера, которые мы для вас подобрали
                 .search-room__items 
@@ -9,22 +10,62 @@
                         .search-room__slider 
                             img(src="./img/room_1.png", alt="room") 
                         .search-room__price 
-                            .search-room__number №
-                            .search-room__room-number 888
-                            .search-room__type люкс
-                            .search-room__value 9990₽
-                            .search-room__day в сутки
+                            .search-room__price_left 
+                                .search-room__number №
+                                .search-room__room-number 888
+                                .search-room__type люкс
+                            .search-room__price_right
+                                .search-room__value 9990₽
+                                .search-room__day в сутки
                         .search-room__stars_wrapper
                             .search-room__stars 
-                                .search-room__star
-                                    img(src="./img/star.png", alt="star")
-                                .search-room__star
-                                    img(src="./img/star.png", alt="star")
-                                .search-room__star
-                                    img(src="./img/star.png", alt="star")
-                                .search-room__star
-                                    img(src="./img/star.png", alt="star")
-                                .search-room__star
-                                    img(src="./img/star.png", alt="star")
-                            .search-room__reviews_bold 19
-                            .search-room__reviews  Отзывов
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                            .search-room__reviews_wrapper
+                                .search-room__reviews_bold 19
+                                .search-room__reviews  Отзывов
+                    .search-room__item 
+                        .search-room__slider 
+                            img(src="./img/room_2.png", alt="room") 
+                        .search-room__price 
+                            .search-room__price_left 
+                                .search-room__number №
+                                .search-room__room-number 840
+                            .search-room__price_right
+                                .search-room__value 8500₽
+                                .search-room__day в сутки
+                        .search-room__stars_wrapper
+                            .search-room__stars 
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star_border
+                            .search-room__reviews_wrapper
+                                .search-room__reviews_bold 65
+                                .search-room__reviews  Отзывов
+                    .search-room__item 
+                        .search-room__slider 
+                            img(src="./img/room_3.png", alt="room") 
+                        .search-room__price 
+                            .search-room__price_left 
+                                .search-room__number №
+                                .search-room__room-number 980
+                                .search-room__type люкс
+                            .search-room__price_right
+                                .search-room__value 9990₽
+                                .search-room__day в сутки
+                        .search-room__stars_wrapper
+                            .search-room__stars 
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star
+                                span.material-icons-outlined.md-24.material-icons.content star_border
+                                span.material-icons-outlined.md-24.material-icons.content star_border
+                            .search-room__reviews_wrapper
+                                .search-room__reviews_bold 35
+                                .search-room__reviews  Отзывов
+                        
