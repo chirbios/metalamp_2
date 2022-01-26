@@ -1,7 +1,32 @@
+import noUiSlider from 'nouislider';
+// Or the namespace:
+import 'nouislider/dist/nouislider.css';
+
 
 import './main.scss';
+// Swiper
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+//search room slider
+
+var slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
 
 
+//datepicker
 $( function() {
   $.extend($.datepicker,{_checkOffset:function(inst,offset,isFixed){return offset}});
   $( "#from, #to" ).datepicker({

@@ -7,21 +7,23 @@ html(lang="en")
         title Document
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
         link(rel="stylesheet", href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css")
+        link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+        script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
         script(src="https://code.jquery.com/jquery-3.6.0.js")
         script(src="https://code.jquery.com/ui/1.13.0/jquery-ui.js")
     body
-        .navigation
-            .container
-                include components/navigation/navigation.pug
-        .find-room 
-            .container 
-                include components/findRoom/findRoom.pug
-        footer.footer 
-            .container 
-                include components/footer/footer.pug
-        .footer-line 
-            .container 
-                include components/footer/footer__bot.pug   
-        include components/roomDetails/roomDetails.pug
+        //- .navigation
+        //-     .container
+        //-         include components/navigation/navigation.pug
+        //- .find-room 
+        //-     .container 
+        //-         include components/findRoom/findRoom.pug
+        //- footer.footer 
+        //-     .container 
+        //-         include components/footer/footer.pug
+        //- .footer-line 
+        //-     .container 
+        //-         include components/footer/footer__bot.pug   
+        //- include components/roomDetails/roomDetails.pug
         include components/searchRoom/searchRoom.pug
         script(src='./main.js')

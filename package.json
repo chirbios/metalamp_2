@@ -18,6 +18,8 @@
   "dependencies": {
     "air-datepicker": "^3.1.0",
     "date-fns": "^2.28.0",
-    "react-nice-dates": "^3.1.0"
+    "nouislider": "^15.5.1",
+    "react-nice-dates": "^3.1.0",
+    "swiper": "^7.4.1"
   }
 }
