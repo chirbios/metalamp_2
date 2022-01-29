@@ -1,9 +1,37 @@
 .search-room 
     .container 
-        .search-room_wrapper 
+        .search-room__wrapper 
             .search-room__filter 
-                div(id="slider")
-                
+                .search-room__filter_wrapper 
+                    .search-room__filter_item
+                    .search-room__filter_item
+                    .search-room__filter_item
+                        .search-room__filter_item_top
+                            .search-room__filter_title диапазон цены
+                            .search-room__filter_subtitle 5 000₽ - 10 000₽
+                        div(id="slider")
+                        .search-room__filter_subtitle Стоимость за сутки пребывания в номере
+                    .search-room__filter_item
+                        .search-room__filter_title правила дома
+                        label.label
+                            input(type="checkbox" class='checkbox' id="smoke" name="smoke")
+                            span.text.search-room__filter_label-mini(for="smoke") Можно курить
+                        label.label
+                            input(type="checkbox" class='checkbox' id="pet" name="pet" )
+                            span.text.search-room__filter_label-mini(for="pet") Можно с питомцами
+                        label.label
+                            input(type="checkbox" class='checkbox' id="guest" name="guest" )
+                            span.text.search-room__filter_label-mini Можно пригласить гостей (до 10 человек)
+                    .search-room__filter_item
+                        .search-room__filter_title доступность
+                        label.label
+                            input(type="checkbox" class='checkbox' id="corridor" name="corridor")
+                            span.text.search-room__filter_label(for="corridor") Широкий коридор
+                                .search-room__filter_subtitle Ширина коридоров в номере не менее 91 см.
+                        label.label
+                            input(type="checkbox" class='checkbox' id="invalid" name="invalid")
+                            span.text.search-room__filter_label Помощник для инвалидов
+                                .search-room__filter_subtitle На 1 этаже вас встретит специалист  и проводит до номера.
             .search-room__rooms 
                 .search-room__subtitle Номера, которые мы для вас подобрали
                 .search-room__items 
