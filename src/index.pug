@@ -15,15 +15,16 @@ html(lang="en")
         .navigation
             .container
                 include components/navigation/navigation.pug
-        .find-room 
-            .container 
-                include components/findRoom/findRoom.pug
+        //- .find-room 
+        //-     .container 
+        //-         include components/findRoom/findRoom.pug
+        include components/authorization/registration.pug
+        //- include components/roomDetails/roomDetails.pug
+        //- include components/searchRoom/searchRoom.pug
         footer.footer 
             .container 
                 include components/footer/footer.pug
         .footer-line 
             .container 
                 include components/footer/footer__bot.pug   
-        include components/roomDetails/roomDetails.pug
-        include components/searchRoom/searchRoom.pug
         script(src='./main.js')

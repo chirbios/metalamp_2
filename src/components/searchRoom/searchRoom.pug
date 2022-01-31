@@ -4,34 +4,40 @@
             .search-room__filter 
                 .search-room__filter_wrapper 
                     .search-room__filter_item
+                        .search-room__filter_title-first даты пребывания в отеле
+                        select(class='search-room__filter_select' name="user_profile_color_2" required="required")
+                            option(value="") 19 авг - 23 авг
                     .search-room__filter_item
+                        .search-room__filter_title.pt20 гости
+                        select(class='search-room__filter_select' name="user_profile_color_2" required="required")
+                            option(value="") 3 гостя, 1 младенец
                     .search-room__filter_item
                         .search-room__filter_item_top
                             .search-room__filter_title диапазон цены
-                            .search-room__filter_subtitle 5 000₽ - 10 000₽
+                            .search-room__filter_subtitle.pt30 5 000₽ - 10 000₽
                         div(id="slider")
-                        .search-room__filter_subtitle Стоимость за сутки пребывания в номере
+                        .search-room__filter_price Стоимость за сутки пребывания в номере
                     .search-room__filter_item
                         .search-room__filter_title правила дома
-                        label.label
-                            input(type="checkbox" class='checkbox' id="smoke" name="smoke")
-                            span.text.search-room__filter_label-mini(for="smoke") Можно курить
-                        label.label
-                            input(type="checkbox" class='checkbox' id="pet" name="pet" )
-                            span.text.search-room__filter_label-mini(for="pet") Можно с питомцами
-                        label.label
-                            input(type="checkbox" class='checkbox' id="guest" name="guest" )
-                            span.text.search-room__filter_label-mini Можно пригласить гостей (до 10 человек)
-                    .search-room__filter_item
+                        .search-room__filter_element
+                            input(type="checkbox" id="check" name="check")
+                            label(for="check").search-room__filter_label-mini Можно курить
+                        .search-room__filter_element
+                            input(type="checkbox" id="check1" name="check1")
+                            label(for="check1").search-room__filter_label-mini Можно с питомцами
+                        .search-room__filter_element
+                            input(type="checkbox" id="check2" name="check2")
+                            label(for="check2").search-room__filter_label-mini Можно пригласить гостей (до 10 человек)
                         .search-room__filter_title доступность
-                        label.label
-                            input(type="checkbox" class='checkbox' id="corridor" name="corridor")
-                            span.text.search-room__filter_label(for="corridor") Широкий коридор
+                        .search-room__filter_element
+                            input(type="checkbox" id="check3" name="check3")
+                            label(for="check3").search-room__filter_label Широкий коридор
                                 .search-room__filter_subtitle Ширина коридоров в номере не менее 91 см.
-                        label.label
-                            input(type="checkbox" class='checkbox' id="invalid" name="invalid")
-                            span.text.search-room__filter_label Помощник для инвалидов
-                                .search-room__filter_subtitle На 1 этаже вас встретит специалист  и проводит до номера.
+                        .search-room__filter_element
+                            input(type="checkbox" id="check4" name="check4")
+                            label(for="check4").search-room__filter_label Помощник для инвалидов
+                                .search-room__filter_subtitle На 1 этаже вас встретит специалист  и проводит до номера. 
+                    
             .search-room__rooms 
                 .search-room__subtitle Номера, которые мы для вас подобрали
                 .search-room__items 
@@ -411,3 +417,11 @@
                             .search-room__reviews_wrapper
                                 .search-room__reviews_bold 55
                                 .search-room__reviews  Отзывов
+            .search-room__page-switcher 
+                a(class="current" href="#1") 1
+                a(href="#2") 2
+                a(href="#3") 3
+                span &hellip;
+                a(href="#15") 15
+                a(href="#next")
+                    span.material-icons-outlined.material-icons.md-24.page-swiper  arrow_forward
