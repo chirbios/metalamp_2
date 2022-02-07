@@ -304,9 +304,9 @@
 }
 
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
 * {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -332,7 +332,6 @@ body {
   font-weight: 400;
   src: url("/Montserrat-Regular.21b801b8.eot");
   src: local("☺"), url("/Montserrat-Regular.1b35f2ae.woff") format("woff"), url("/Montserrat-Regular.44e710c1.ttf") format("truetype"), url("/Montserrat-Regular.6f6bdac5.svg") format("svg");
-  font-weight: normal;
   font-style: normal;
 }
 @font-face {
@@ -341,7 +340,7 @@ body {
   font-weight: 400;
   src: url(https://example.com/MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+  src: local("Material Icons"), local("MaterialIcons-Regular");
 }
 .material-icons {
   font-family: "Material Icons";
@@ -390,7 +389,7 @@ body {
 
 button.btn__dark {
   margin-left: 20px;
-  padding: 10px 21px 11px 19px;
+  padding: 10px 21px 11px 20px;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -403,10 +402,19 @@ button.btn__dark {
   cursor: pointer;
 }
 
+button.btn__dark.big {
+  margin-top: 20px;
+  width: 100%;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 button.btn__white {
   margin-left: 20px;
   background: #fff;
-  padding: 8px 18px 9px 18px;
+  padding: 8px 20px 9px 18px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -417,10 +425,14 @@ button.btn__white {
   cursor: pointer;
 }
 
+button.btn__white.registration-btn {
+  padding: 14px 26px 15px 26px;
+}
+
 .arrow__down {
   margin: 0 10px 0 5px;
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-top: 2px solid rgba(31, 32, 65, 0.5);
   border-right: 2px solid rgba(31, 32, 65, 0.5);
   transform: translate(-2px, -2px);
@@ -431,7 +443,7 @@ button.btn__white {
   background: url("/bg_landingPage.6144e723.jpg") no-repeat center/100%;
 }
 .find-room__form {
-  padding: 38px 30px 29px 30px;
+  padding: 38px 28px 29px 30px;
   max-width: 380px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -445,13 +457,15 @@ button.btn__white {
   grid-template-columns: 47% 47%;
 }
 .find-room__title {
+  letter-spacing: 0.7px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   color: #1F2041;
 }
 .find-room__subtitle {
-  padding-top: 21px;
+  letter-spacing: 0.4px;
+  padding-top: 22px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -460,7 +474,7 @@ button.btn__white {
 }
 .find-room input {
   font-size: 14px;
-  margin-top: 6px;
+  margin-top: 5px;
   padding: 12px 15px 13px 14px;
   width: 100%;
   background: #FFFFFF;
@@ -470,13 +484,13 @@ button.btn__white {
 }
 .find-room #numberguests {
   margin-top: 5px;
-  padding: 11px 0px 12px 13px;
+  padding: 12px 0px 12px 14px;
 }
 .find-room button.find-room__btn {
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 31px;
   width: 100%;
-  padding: 14px 21px 15px 17px;
+  padding: 14px 19px 14px 15px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -499,9 +513,11 @@ button.btn__white {
 }
 .find-room .find-room__text.first {
   margin-top: 320px;
+  transform: translate(8px, -2px);
 }
 .find-room .find-room__text.end {
   padding-bottom: 18px;
+  transform: translate(7px, -2px);
 }
 .find-room .absolute {
   position: absolute;
@@ -509,15 +525,21 @@ button.btn__white {
 }
 .find-room .absolute-max {
   position: absolute;
-  transform: rotate(135deg) translate(-188px, -217px);
+  transform: rotate(135deg) translate(-188px, -219px);
 }
-
+.find-room span.material-icons-outlined.arrow-down__form {
+  z-index: 10;
+  position: absolute;
+  font-size: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  transform: translate(94px, -34px);
+}
 .find-room__subtitle.max {
-  padding-top: 0px;
+  padding-top: 1px;
 }
 
 .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
-  width: 312px;
+  width: 318px;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
@@ -528,10 +550,12 @@ button.btn__white {
 .arrow__img_white {
   cursor: pointer;
   position: absolute;
-  transform: translate(283px, 40px);
+  transform: translate(286px, 39px);
 }
 
 .ui-datepicker-trigger {
+  z-index: 11;
+  opacity: 0;
   transform: translate(114px, -34px);
   width: 17px;
   margin-left: 5px;
@@ -634,6 +658,10 @@ tr * {
   top: 14px;
 }
 
+#ui-datepicker-div {
+  top: 332px;
+}
+
 .footer__top {
   padding-top: 104px;
   display: flex;
@@ -697,7 +725,7 @@ tr * {
 }
 
 .arrow__img {
-  transform: translate(226px, 32px);
+  transform: translate(224px, 29px);
   position: absolute;
 }
 
@@ -753,6 +781,10 @@ tr * {
 .room-details__points_wrapper {
   margin-top: 30px;
 }
+.room-details__points_item {
+  display: flex;
+  align-items: center;
+}
 .room-details__points_vote {
   transform: translate(-189px, -23px);
   text-align: center;
@@ -762,6 +794,7 @@ tr * {
   color: #BC9CFF;
 }
 .room-details__points_verdict {
+  padding-left: 5px;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
@@ -804,6 +837,30 @@ tr * {
   border-radius: 100% 0% 100% 0%/0% 0% 100% 100%;
   border-left: none;
   border-top: none;
+}
+.room-details__points_circle-yellow {
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+.room-details__points_circle-green {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+.room-details__points_circle-blue {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+.room-details__points_circle-black {
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
 }
 .room-details__rating {
   display: grid;
@@ -916,12 +973,13 @@ tr * {
 }
 
 .search-room__wrapper {
-  margin-top: 30px;
+  margin-top: 29px;
   display: grid;
   grid-template-columns: minmax(200px, 266px) minmax(600px, 834px);
   column-gap: 60px;
 }
 .search-room__subtitle {
+  letter-spacing: 0.7px;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
@@ -935,7 +993,7 @@ tr * {
   border-radius: 5px;
 }
 .search-room__price {
-  padding: 16px 17px 0px 20px;
+  padding: 21px 17px 0px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -953,8 +1011,8 @@ tr * {
 }
 .search-room__stars_wrapper {
   border-top: 1px solid rgba(31, 32, 65, 0.1);
-  padding-top: 8px;
-  margin: 8px 20px 20px 20px;
+  padding-top: 6px;
+  margin: 8px 20px 20px 21px;
   display: flex;
   justify-content: space-between;
 }
@@ -974,6 +1032,7 @@ tr * {
   color: #1F2041;
 }
 .search-room__type {
+  padding-left: 6px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -994,7 +1053,7 @@ tr * {
 }
 .search-room__reviews_wrapper {
   display: flex;
-  padding-top: 3px;
+  padding-top: 6px;
 }
 .search-room__reviews {
   font-size: 14px;
@@ -1012,7 +1071,8 @@ tr * {
 }
 .search-room__items {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  column-gap: 13px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .search-room__filter_title-first {
   font-weight: bold;
@@ -1219,9 +1279,16 @@ tr * {
   background: url("/registration.057b9a19.jpg") no-repeat 100%/100%;
   display: flex;
 }
+.registration__header {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+}
 .registration__wrapper {
   margin: 19px auto 19px auto;
-  padding: 40px 30px 40px 30px;
+  padding: 40px 30px 30px 30px;
   max-width: 380px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -1229,9 +1296,62 @@ tr * {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.registration__wrapper input {
+  margin-top: 10px;
+  padding: 13px 15px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.registration__wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.registration__wrapper input#registration_name, .registration__wrapper input#registration_surname, .registration__wrapper input#registration_password, .registration__wrapper input#registration_email, .registration__wrapper input#registration_date {
+  width: 100%;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.registration__toxin {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration__toxin_question {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+.registration__title {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  text-transform: uppercase;
+}
+.registration__news {
+  padding-top: 10px;
+}
 .registration__news input[type=checkbox] {
   position: absolute;
   opacity: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 .registration__news input[type=checkbox] + label {
   position: relative;
@@ -1244,10 +1364,10 @@ tr * {
 .registration__news input[type=checkbox] + label:before {
   content: "";
   position: absolute;
-  top: -4px;
+  top: -1px;
   left: 0;
-  width: 50px;
-  height: 26px;
+  width: 40px;
+  height: 20px;
   border-radius: 13px;
   background: rgba(31, 32, 65, 0.25);
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
@@ -1255,10 +1375,10 @@ tr * {
 .registration__news input[type=checkbox] + label:after {
   content: "";
   position: absolute;
-  top: -1px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
+  top: 3px;
+  left: 1px;
+  width: 12px;
+  height: 12px;
   border-radius: 10px;
   background: #FFF;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -1269,6 +1389,43 @@ tr * {
 }
 .registration__news input[type=checkbox]:checked + label:after {
   left: 27px;
+}
+.registration .radio__wrapper {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.registration .radio__wrapper input {
+  width: 20px;
+  height: 20px;
+}
+.registration label.radio__text {
+  padding-left: 5px;
+}
+.registration label.radio__text.active::before {
+  padding: 8px 10px 4px 18px;
+  transform: translate(-45px, 5px);
+  font-family: "Material Icons";
+  content: "\e837";
+  font-size: 24px;
+  width: 20px;
+  height: 20px;
+  color: #BC9CFF;
+  overflow: hidden;
+  position: absolute;
+}
+.registration input#choice1 {
+  display: none;
+}
+.registration input#choice2 {
+  transform: translate(3px, 4px);
+}
+.registration label.radio__text.active {
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 span.material-icons-outlined {
@@ -1285,6 +1442,7 @@ span.material-icons-outlined {
 
 .material-icons.md-24 {
   font-size: 24px;
+  padding-top: 2px;
 }
 
 .material-icons.md-36 {
@@ -1321,6 +1479,10 @@ span.material-icons-outlined {
 
 .pt20 {
   padding-top: 20px;
+}
+
+.pl100 {
+  transform: translate(60px, 1px);
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

@@ -51,6 +51,10 @@
     &__points_wrapper {
         margin-top: 30px;
     }
+    &__points_item{
+        display: flex;
+        align-items: center;
+    }
     &__points_vote {
         transform: translate(-189px, -23px);
         text-align: center;
@@ -60,6 +64,7 @@
         color: #BC9CFF;
     }
     &__points_verdict {
+        padding-left: 5px;
         font-size: 14px;
         line-height: 24px;
         color: rgba(31, 32, 65, 0.75);
@@ -102,6 +107,32 @@
         border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%  ;
         border-left: none;
         border-top: none;
+    }
+    &__points_circle {
+        &-yellow{
+            background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+        }
+        &-green{
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+        }
+        &-blue{
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+        }
+        &-black{
+            background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+        }
     }
     &__rating {
         display: grid;

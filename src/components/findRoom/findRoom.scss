@@ -2,7 +2,7 @@
     padding-top: 70px;
     background: url('/img/bg_landingPage.jpg') no-repeat center / 100% ; //  no-repeat center bottom
     &__form {
-        padding: 38px 30px 29px 30px;
+        padding: 38px 28px 29px 30px;
         max-width: 380px;
         background: #FFFFFF;
         border: 1px solid rgba(0, 0, 0, 0.12);
@@ -16,13 +16,15 @@
         grid-template-columns: 47% 47%;
     }
     &__title {
+        letter-spacing: .7px;
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
         color: #1F2041;
     }
     &__subtitle {
-        padding-top: 21px;
+        letter-spacing: .4px;
+        padding-top: 22px;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
@@ -31,7 +33,7 @@
     }
     input {
         font-size: 14px;
-        margin-top: 6px;
+        margin-top: 5px;
         padding: 12px 15px 13px 14px;
         width: 100%;
         background: #FFFFFF;
@@ -41,13 +43,13 @@
     }
     #numberguests {
         margin-top: 5px;
-        padding: 11px 0px 12px 13px;
+        padding: 12px 0px 12px 14px;
     }
     button.find-room__btn {
         cursor: pointer;
-        margin-top: 30px;
+        margin-top: 31px;
         width: 100%;
-        padding: 14px 21px 15px 17px;
+        padding: 14px 19px 14px 15px;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
@@ -70,9 +72,11 @@
     }
     .find-room__text.first {
         margin-top: 320px;
+        transform: translate(8px, -2px);
     }
     .find-room__text.end {
         padding-bottom: 18px;
+        transform: translate(7px, -2px);
     }
     .absolute {
         position: absolute;
@@ -80,14 +84,22 @@
     }
     .absolute-max {
         position: absolute;
-        transform: rotate(135deg) translate(-188px, -217px);
+        transform: rotate(135deg) translate(-188px, -219px);
+    }
+    span.material-icons-outlined.arrow-down__form {
+        z-index: 10;
+        position: absolute;
+        font-size: 24px;
+        color: rgba(31, 32, 65, 0.5);
+        transform: translate(94px, -34px);
+    }
+    &__subtitle.max {
+        padding-top: 1px;
     }
 }
-.find-room__subtitle.max {
-    padding-top: 0px;
-}
+
 .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
-    width: 312px;
+    width: 318px;
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
@@ -97,9 +109,11 @@
 .arrow__img_white {
     cursor: pointer;
     position: absolute;
-    transform: translate(283px, 40px);
+    transform: translate(286px, 39px);
 }
 .ui-datepicker-trigger {
+    z-index: 11;
+    opacity: 0;
     transform: translate(114px, -34px);
     width: 17px;
 	margin-left: 5px;
@@ -196,4 +210,7 @@ tr {
 
 .ui-datepicker .ui-datepicker-prev {
     top: 14px
+}
+#ui-datepicker-div{
+    top: 332px;
 }

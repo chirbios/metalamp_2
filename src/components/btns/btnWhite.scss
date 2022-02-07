@@ -1,7 +1,7 @@
 button.btn__white {
     margin-left: 20px;
     background: #fff;
-    padding: 8px 18px 9px 18px;
+    padding: 8px 20px 9px 18px;
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -10,4 +10,7 @@ button.btn__white {
     border: 2px solid #BC9CFF;
     border-radius: 22px;
     cursor: pointer;
+}
+button.btn__white.registration-btn {
+    padding: 14px 26px 15px 26px;
 }

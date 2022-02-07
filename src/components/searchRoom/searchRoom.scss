@@ -1,11 +1,12 @@
 .search-room {
     &__wrapper {
-        margin-top: 30px;
+        margin-top: 29px;
         display: grid;
         grid-template-columns: minmax(200px, 266px) minmax(600px, 834px);
         column-gap: 60px;
     }
     &__subtitle {
+        letter-spacing: .7px;
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
@@ -19,7 +20,7 @@
         border-radius: 5px;
     }
     &__price {
-        padding: 16px 17px 0px 20px;
+        padding: 21px 17px 0px 22px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -37,8 +38,8 @@
     }
     &__stars_wrapper {
         border-top: 1px solid rgba(31, 32, 65, 0.1);;
-        padding-top: 8px;
-        margin: 8px 20px 20px 20px;
+        padding-top: 6px;
+        margin: 8px 20px 20px 21px;
         display: flex;
         justify-content: space-between;
     }
@@ -58,6 +59,7 @@
         color: #1F2041;
     }
     &__type {
+        padding-left: 6px;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
@@ -78,7 +80,7 @@
     }
     &__reviews_wrapper {
         display: flex;
-        padding-top: 3px;
+        padding-top: 6px;
     }
     &__reviews {
         font-size: 14px;
@@ -96,7 +98,8 @@
     }
     &__items {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        column-gap: 13px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     &__filter_title-first {
         font-weight: bold;

@@ -1,6 +1,6 @@
 button.btn__dark {
     margin-left: 20px;
-    padding: 10px 21px 11px 19px;
+    padding: 10px 21px 11px 20px;
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -11,4 +11,12 @@ button.btn__dark {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
     cursor: pointer;
+}
+button.btn__dark.big {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

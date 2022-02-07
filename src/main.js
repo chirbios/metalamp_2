@@ -31,8 +31,8 @@ $( function() {
   $.extend($.datepicker,{_checkOffset:function(inst,offset,isFixed){return offset}});
   $( "#from, #to" ).datepicker({
     showOn: "button",
-    buttonText: "date",
-    buttonImage: "https://www.pngmart.com/files/15/Arrow-Down-Transparent-Images-PNG.png",
+    buttonText: "expand_more",
+    buttonImage: "https://www.pngmart.com/files/15/Vector-Arrow-Down-PNG-Picture.png",
     buttonImageOnly: true,
     showOtherMonths: true,
     selectOtherMonths: true,
@@ -87,8 +87,6 @@ $( function() {
 
     return date;
   }
-  
-  
   $.datepicker.setDefaults($.datepicker.regional['ru']);
     
-} );
+});

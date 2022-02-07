@@ -1,22 +1,24 @@
 .registration 
     .container 
         form.registration__wrapper
-            .registration__title Регистрация аккаунта
+            .registration__header Регистрация аккаунта
             input(type='text' id='registration_name' placeholder='Имя') 
             input(type='text' id='registration_surname' placeholder='Фамилия') 
-            div
-                input(type="radio" id="choice1" name="sex" value="Мужчина")
-                label(for="contactChoice1") Мужчина
+            .radio__wrapper
+                input(type="radio" id="choice1" name="sex" value="Мужчина" class='active')
+                label.radio__text.active(for="choice1") Мужчина
                 input(type="radio" id="choice2" name="sex" value="Женщина")
-                label(for="contactChoice2") Женщина
+                label.radio__text(for="choice2") Женщина
             .registration__title дата рождения
-            input(type='text' id='registration_date' placeholder='ДД.ММ.ГГГГ') 
+                input(type='text' id='registration_date' placeholder='ДД.ММ.ГГГГ') 
             .registration__title данные для входа в сервис
-            input(type='email' id='registration_email' placeholder='Email') 
-            input(type='password' id='registration_password' placeholder='Пароль') 
+                input(type='email' id='registration_email' placeholder='Email') 
+                input(type='password' id='registration_password' placeholder='Пароль') 
             .registration__news 
                 input(type='checkbox' id='checkbox__news') 
-                label(for='checkbox__news') Checkbox 1
+                label(for='checkbox__news') Получать спецпредложения
+            button.btn__dark.big зарегистрироваться 
+                span.material-icons-outlined.material-icons.md-24.white.pl100   arrow_forward
             .registration__toxin 
                 .registration__toxin_question Уже есть аккаунт на Toxin 
-                button.registration__toxin_btn войти
+                button.btn__white.registration-btn войти
