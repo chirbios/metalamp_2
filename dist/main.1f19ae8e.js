@@ -2439,7 +2439,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\arrow_forward.svg":[["arrow_forward.04b75f4b.svg","img/arrow_forward.svg"],"img/arrow_forward.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\arrow_forward.svg":[["arrow_forward.04b75f4b.svg","img/arrow_forward.svg"],"img/arrow_forward.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _nouislider = _interopRequireDefault(require("nouislider"));
@@ -2450,7 +2450,6 @@ require("./main.scss");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Or the namespace:
 // Swiper
 var swiper = new Swiper(".swiper", {
   loop: true,
@@ -2469,9 +2468,42 @@ _nouislider.default.create(slider, {
     'min': 0,
     'max': 100
   }
-}); //datepicker
+}); // datepicker
 
 
+$(".datepicker").datepicker({
+  minDate: 0,
+  showOn: "button",
+  buttonText: "expand_more",
+  buttonImage: "https://www.pngmart.com/files/15/Vector-Arrow-Down-PNG-Picture.png",
+  buttonImageOnly: true,
+  showOtherMonths: true,
+  selectOtherMonths: true,
+  showButtonPanel: true,
+  beforeShowDay: function beforeShowDay(date) {
+    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
+    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
+    return [true, date1 && (date.getTime() == date1.getTime() || date2 && date >= date1 && date <= date2) ? "dp-highlight" : ""];
+  },
+  onSelect: function onSelect(dateText, inst) {
+    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
+    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
+    var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+
+    if (!date1 || date2) {
+      $("#input1").val(dateText);
+      $("#input2").val("");
+      $(this).datepicker();
+    } else if (selectedDate < date1) {
+      $("#input2").val($("#input1").val());
+      $("#input1").val(dateText);
+      $(this).datepicker();
+    } else {
+      $("#input2").val(dateText);
+      $(this).datepicker();
+    }
+  }
+});
 $(function () {
   $.extend($.datepicker, {
     _checkOffset: function _checkOffset(inst, offset, isFixed) {
@@ -2485,7 +2517,25 @@ $(function () {
     buttonImageOnly: true,
     showOtherMonths: true,
     selectOtherMonths: true,
-    showButtonPanel: true
+    showButtonPanel: true,
+    onSelect: function onSelect(dateText, inst) {
+      var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
+      var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
+      var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+
+      if (!date1 || date2) {
+        $("#from").val(dateText);
+        $("#to").val("");
+        $(this).datepicker();
+      } else if (selectedDate < date1) {
+        $("#to").val($("#from").val());
+        $("#from").val(dateText);
+        $(this).datepicker();
+      } else {
+        $("#to").val(dateText);
+        $(this).datepicker();
+      }
+    }
   });
   $.datepicker.regional['ru'] = {
     closeText: 'Закрыть',
@@ -2562,7 +2612,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57898" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

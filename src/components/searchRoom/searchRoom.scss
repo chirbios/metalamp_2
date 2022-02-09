@@ -6,7 +6,7 @@
         column-gap: 60px;
     }
     &__subtitle {
-        letter-spacing: .7px;
+        padding-bottom: 2px;
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
@@ -20,7 +20,7 @@
         border-radius: 5px;
     }
     &__price {
-        padding: 21px 17px 0px 22px;
+        padding: 20px 17px 0px 21px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -59,7 +59,8 @@
         color: #1F2041;
     }
     &__type {
-        padding-left: 6px;
+        padding-top: 2px;
+        padding-left: 3px;
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
@@ -98,7 +99,7 @@
     }
     &__items {
         display: grid;
-        column-gap: 13px;
+        column-gap: 12px;
         grid-template-columns: 1fr 1fr 1fr;
     }
     &__filter_title-first {
@@ -263,7 +264,7 @@
     }
     .circles {
         position: absolute;
-        transform: translate(207px, -21px);
+        transform: translate(207px, -23px);
         z-index: 100;
     }
     .swiper-slide img {

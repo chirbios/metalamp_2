@@ -16,14 +16,12 @@
         grid-template-columns: 47% 47%;
     }
     &__title {
-        letter-spacing: .7px;
         font-weight: 700;
         font-size: 24px;
         line-height: 29px;
         color: #1F2041;
     }
     &__subtitle {
-        letter-spacing: .4px;
         padding-top: 22px;
         font-weight: 700;
         font-size: 12px;
@@ -91,7 +89,7 @@
         position: absolute;
         font-size: 24px;
         color: rgba(31, 32, 65, 0.5);
-        transform: translate(94px, -34px);
+        transform: translate(94px, -37px);
     }
     &__subtitle.max {
         padding-top: 1px;
@@ -213,4 +211,36 @@ tr {
 }
 #ui-datepicker-div{
     top: 332px;
+}
+a.ui-state-default.ui-state-highlight {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.dp-highlight .ui-state-default {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #FFF;
+}
+.dp-highlight >.ui-state-default:nth-child(1){
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    color: #FFF;
+}
+.ui-datepicker.ui-datepicker-multi  {
+    width: 100% !important;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+    float:none;
+}
+#datepicker {
+    height: 300px;
+    overflow-x: scroll;
+}
+.ui-widget { font-size: 100% }
+.ui-state-active .ui-widget-content .ui-state-active {
+    background: #BC9CFF;
+    border-radius: 22px;
+    color: #FFF;
 }
