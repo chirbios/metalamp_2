@@ -2439,7 +2439,8 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\arrow_forward.svg":[["arrow_forward.04b75f4b.svg","img/arrow_forward.svg"],"img/arrow_forward.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+var define;
 "use strict";
 
 var _nouislider = _interopRequireDefault(require("nouislider"));
@@ -2468,89 +2469,147 @@ _nouislider.default.create(slider, {
     'min': 0,
     'max': 100
   }
-}); // datepicker
+}); //datepicker
 
 
-$(".datepicker").datepicker({
-  minDate: 0,
-  showOn: "button",
-  buttonText: "expand_more",
-  buttonImage: "https://www.pngmart.com/files/15/Vector-Arrow-Down-PNG-Picture.png",
-  buttonImageOnly: true,
+var start_date = null,
+    end_date = null;
+var timestamp_start_date = null,
+    timestamp_end_date = null;
+var $input_start_date = null,
+    $input_end_date = null;
+
+function getDateClass(date, start, end) {
+  if (end != null && start != null) {
+    if (date > start && date < end) return [true, "sejour", "Séjour"];
+  }
+
+  if (date == start) return [true, "start", "Прибытие"];
+  if (date == end) return [true, "end", "Выезд"];
+  return false;
+}
+
+function datepicker_draw_nb_nights() {
+  var $datepicker = jQuery("#ui-datepicker-div");
+  setTimeout(function () {
+    if (start_date != null && end_date != null) {
+      var $qty_days_stay = jQuery("<div />", {
+        class: "ui-datepicker-stay-duration"
+      });
+      var qty_nights_stay = get_days_difference(timestamp_start_date, timestamp_end_date);
+      $qty_days_stay.text(qty_nights_stay + " nights stay");
+      $qty_days_stay.appendTo($datepicker);
+    }
+  });
+}
+
+var options_start_date = {
+  showAnim: false,
+  constrainInput: true,
+  numberOfMonths: 1,
   showOtherMonths: true,
-  selectOtherMonths: true,
-  showButtonPanel: true,
-  beforeShowDay: function beforeShowDay(date) {
-    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
-    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
-    return [true, date1 && (date.getTime() == date1.getTime() || date2 && date >= date1 && date <= date2) ? "dp-highlight" : ""];
+  beforeShow: function beforeShow(input, datepicker) {
+    datepicker_draw_nb_nights();
   },
-  onSelect: function onSelect(dateText, inst) {
-    var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
-    var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
-    var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+  beforeShowDay: function beforeShowDay(date) {
+    // 0: published
+    // 1: class
+    // 2: tooltip
+    var timestamp_date = date.getTime();
+    var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
+    if (result != false) return result;
+    return [true, "", ""]; // return [ true, "chocolate", "Chocolate! " ];
+  },
+  onSelect: function onSelect(date_string, datepicker) {
+    // this => input
+    start_date = $input_start_date.datepicker("getDate");
+    timestamp_start_date = start_date.getTime();
+  },
+  onClose: function onClose() {
+    if (end_date != null) {
+      if (timestamp_start_date >= timestamp_end_date || end_date == null) {
+        $input_end_date.datepicker("setDate", null);
+        end_date = null;
+        timestamp_end_date = null;
+        $input_end_date.datepicker("show");
+        return;
+      }
+    }
 
-    if (!date1 || date2) {
-      $("#input1").val(dateText);
-      $("#input2").val("");
-      $(this).datepicker();
-    } else if (selectedDate < date1) {
-      $("#input2").val($("#input1").val());
-      $("#input1").val(dateText);
-      $(this).datepicker();
-    } else {
-      $("#input2").val(dateText);
-      $(this).datepicker();
+    if (start_date != null && end_date == null) $input_end_date.datepicker("show");
+  }
+};
+var options_end_date = {
+  showAnim: false,
+  constrainInput: true,
+  numberOfMonths: 1,
+  showOtherMonths: true,
+  beforeShow: function beforeShow(input, datepicker) {
+    datepicker_draw_nb_nights();
+  },
+  beforeShowDay: function beforeShowDay(date) {
+    var timestamp_date = date.getTime();
+    var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
+    if (result != false) return result;
+    return [true, "", "Chocolate !"];
+  },
+  onSelect: function onSelect(date_string, datepicker) {
+    // this => input
+    end_date = $input_end_date.datepicker("getDate");
+    timestamp_end_date = end_date.getTime();
+  },
+  onClose: function onClose() {
+    if (end_date == null) return;
+
+    if (timestamp_end_date <= timestamp_start_date || start_date == null) {
+      $input_start_date.datepicker("setDate", null);
+      start_date = null;
+      timestamp_start_date = null;
+      $input_start_date.datepicker("show");
     }
   }
-});
-$(function () {
-  $.datepicker.regional['ru'] = {
-    closeText: 'Закрыть',
-    prevText: 'Предыдущий',
-    nextText: 'Следующий',
-    currentText: 'Сегодня',
-    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-    dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-    weekHeader: 'Не',
-    dateFormat: 'dd.mm.yy',
+};
+$input_start_date = jQuery("#start-date");
+$input_end_date = jQuery("#end-date");
+$input_start_date.datepicker(options_start_date);
+$input_end_date.datepicker(options_end_date);
+
+function get_days_difference(start_date, end_date) {
+  return Math.floor(end_date - start_date) / (1000 * 60 * 60 * 24);
+}
+
+(function (factory) {
+  "use strict";
+
+  if (typeof define === "function" && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(["../widgets/datepicker"], factory);
+  } else {
+    // Browser globals
+    factory(jQuery.datepicker);
+  }
+})(function (datepicker) {
+  "use strict";
+
+  datepicker.regional.ru = {
+    closeText: "Закрыть",
+    prevText: "&#x3C;Пред",
+    nextText: "След&#x3E;",
+    currentText: "Сегодня",
+    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+    monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+    dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+    weekHeader: "Нед",
+    dateFormat: "dd.mm.yy",
     firstDay: 1,
     isRTL: false,
     showMonthAfterYear: false,
-    yearSuffix: ''
+    yearSuffix: ""
   };
-  var dateFormat = "dd.mm.yy",
-      from = $("#input1").datepicker({
-    defaultDate: "+1w",
-    changeMonth: true,
-    numberOfMonths: 3
-  }).on("change", function () {
-    to.datepicker("option", "minDate", getDate(this));
-  }),
-      to = $("#input2").datepicker({
-    defaultDate: "+1w",
-    changeMonth: true,
-    numberOfMonths: 3
-  }).on("change", function () {
-    from.datepicker("option", "maxDate", getDate(this));
-  });
-
-  function getDate(element) {
-    var date;
-
-    try {
-      date = $.datepicker.parseDate(dateFormat, element.value);
-    } catch (error) {
-      date = null;
-    }
-
-    return date;
-  }
-
-  $.datepicker.setDefaults($.datepicker.regional['ru']);
+  datepicker.setDefaults(datepicker.regional.ru);
+  return datepicker.regional.ru;
 });
 },{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./main.scss":"main.scss"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -2580,7 +2639,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57629" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51545" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

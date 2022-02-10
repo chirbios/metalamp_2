@@ -2,37 +2,20 @@
     .find-room__form 
         .find-room__title Найдём номера под ваши пожелания
         form.find-room__wrapper
-            p 
-                label
-                    b прибытие
+            .find-room__subtitle прибытие
                 input(
                     type="text" 
-                    id="input1" 
-                    size="10" 
-                    placeholder='ДД.ММ.ГГГГ'
+                    name="start-date" 
+                    id="start-date" 
+                    placeholder="Start date"
                     )
-                label
-                    b выезд
-                input(type="text" id="input2" size="10" placeholder='ДД.ММ.ГГГГ')
-            .datepicker
-            //- .find-room__item 
-            //-     .find-room__subtitle Прибытие
-            //-     input(
-            //-         type='text'
-            //-         id='from'
-            //-         name='from'
-            //-         placeholder='ДД.ММ.ГГГГ'
-            //-     )
-            //-     span.material-icons-outlined.arrow-down__form expand_more
-            //- .find-room__item 
-            //-     .find-room__subtitle Выезд
-            //-     input(
-            //-         type='text'
-            //-         id='to'
-            //-         name='to'
-            //-         placeholder='ДД.ММ.ГГГГ'
-            //-     )
-            //-     span.material-icons-outlined.arrow-down__form expand_more
+            .find-room__subtitle выезд
+                input(
+                    type="text" 
+                    name="end-date" 
+                    id="end-date" 
+                    placeholder="End date"
+                    )
             .find__room__item.width 
                 .find-room__subtitle.max Гости
                 .arrow__down.absolute-max
