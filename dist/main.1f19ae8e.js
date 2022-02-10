@@ -2505,38 +2505,6 @@ $(".datepicker").datepicker({
   }
 });
 $(function () {
-  $.extend($.datepicker, {
-    _checkOffset: function _checkOffset(inst, offset, isFixed) {
-      return offset;
-    }
-  });
-  $("#from, #to").datepicker({
-    showOn: "button",
-    buttonText: "expand_more",
-    buttonImage: "https://www.pngmart.com/files/15/Vector-Arrow-Down-PNG-Picture.png",
-    buttonImageOnly: true,
-    showOtherMonths: true,
-    selectOtherMonths: true,
-    showButtonPanel: true,
-    onSelect: function onSelect(dateText, inst) {
-      var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
-      var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
-      var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
-
-      if (!date1 || date2) {
-        $("#from").val(dateText);
-        $("#to").val("");
-        $(this).datepicker();
-      } else if (selectedDate < date1) {
-        $("#to").val($("#from").val());
-        $("#from").val(dateText);
-        $(this).datepicker();
-      } else {
-        $("#to").val(dateText);
-        $(this).datepicker();
-      }
-    }
-  });
   $.datepicker.regional['ru'] = {
     closeText: 'Закрыть',
     prevText: 'Предыдущий',
@@ -2555,14 +2523,14 @@ $(function () {
     yearSuffix: ''
   };
   var dateFormat = "dd.mm.yy",
-      from = $("#from").datepicker({
+      from = $("#input1").datepicker({
     defaultDate: "+1w",
     changeMonth: true,
     numberOfMonths: 3
   }).on("change", function () {
     to.datepicker("option", "minDate", getDate(this));
   }),
-      to = $("#to").datepicker({
+      to = $("#input2").datepicker({
     defaultDate: "+1w",
     changeMonth: true,
     numberOfMonths: 3
@@ -2612,7 +2580,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57629" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

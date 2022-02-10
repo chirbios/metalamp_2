@@ -12,7 +12,7 @@
     }
     &__wrapper {
         display: grid;
-        justify-content: space-between;
+        justify-content: end;
         grid-template-columns: 47% 47%;
     }
     &__title {
@@ -70,11 +70,9 @@
     }
     .find-room__text.first {
         margin-top: 320px;
-        transform: translate(8px, -2px);
     }
     .find-room__text.end {
         padding-bottom: 18px;
-        transform: translate(7px, -2px);
     }
     .absolute {
         position: absolute;
@@ -223,24 +221,20 @@ a.ui-state-default.ui-state-highlight {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #FFF;
 }
-.dp-highlight >.ui-state-default:nth-child(1){
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 22px;
-    color: #FFF;
-}
+
 .ui-datepicker.ui-datepicker-multi  {
     width: 100% !important;
 }
 .ui-datepicker-multi .ui-datepicker-group {
     float:none;
 }
-#datepicker {
-    height: 300px;
-    overflow-x: scroll;
-}
 .ui-widget { font-size: 100% }
 .ui-state-active .ui-widget-content .ui-state-active {
     background: #BC9CFF;
     border-radius: 22px;
     color: #FFF;
+}
+.ui-datepicker { 
+    transform: translate(-169px, 91px);
+    z-index: 1000;
 }

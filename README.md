@@ -1,4 +1,17 @@
-# metalamp_2
-Parsel + PUG + SCSS
-1. В терминале прописать npm i
-2. Запуск сборщика npm start
+# metalamp. Задание 2.
+Установка необходимых пакетов:
+ - В терминале прописать npm i
+
+Запуск сборки:
+ - Запуск сборщик - npm start
+
+Глобальные библиотеки:
+ - Parsel + PUG + SCSS
+
+Описание. 
+    Тестовое задание в MetaLamp. 
+
+В проекте используются нестандартные библиотеки:
+    jquery ui datepicker: https://jqueryui.com/datepicker/
+    swiper: https://swiperjs.com/
+    noUiSlider: https://refreshless.com/nouislider/

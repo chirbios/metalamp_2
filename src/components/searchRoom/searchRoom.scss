@@ -2,6 +2,7 @@
     &__wrapper {
         margin-top: 29px;
         display: grid;
+        justify-content: space-around;
         grid-template-columns: minmax(200px, 266px) minmax(600px, 834px);
         column-gap: 60px;
     }

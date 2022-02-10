@@ -58,89 +58,62 @@ $(".datepicker").datepicker({
       $("#input2").val(dateText);
                 $(this).datepicker();
     }
-  }
+  },
+  
+
 });
-  $( function() {
-    $.extend($.datepicker,{_checkOffset:function(inst,offset,isFixed){return offset}});
-    $( "#from, #to" ).datepicker({
-      showOn: "button",
-      buttonText: "expand_more",
-      buttonImage: "https://www.pngmart.com/files/15/Vector-Arrow-Down-PNG-Picture.png",
-      buttonImageOnly: true,
-      showOtherMonths: true,
-      selectOtherMonths: true,
-      showButtonPanel: true,
-      onSelect: function(dateText, inst) {
-        var date1 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input1").val());
-        var date2 = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#input2").val());
-        var selectedDate = $.datepicker.parseDate($.datepicker._defaults.dateFormat, dateText);
+$( function() {
+
+  $.datepicker.regional['ru'] = {
+    closeText: 'Закрыть',
+    prevText: 'Предыдущий',
+    nextText: 'Следующий',
+    currentText: 'Сегодня',
+    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+    dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    weekHeader: 'Не',
+    dateFormat: 'dd.mm.yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+  };
     
-    
-        if (!date1 || date2) {
-            $("#from").val(dateText);
-            $("#to").val("");
-            $(this).datepicker();
-        } else if( selectedDate < date1 ) {
-            $("#to").val( $("#from").val() );
-            $("#from").val( dateText );
-            $(this).datepicker();
-        } else {
-            $("#to").val(dateText);
-            $(this).datepicker();
-        }
-      }
-    });
-      
-    $.datepicker.regional['ru'] = {
-      closeText: 'Закрыть',
-      prevText: 'Предыдущий',
-      nextText: 'Следующий',
-      currentText: 'Сегодня',
-      monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-      monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-      dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-      dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-      dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-      weekHeader: 'Не',
-      dateFormat: 'dd.mm.yy',
-      firstDay: 1,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: ''
-    };
-      
-      
-    var dateFormat = "dd.mm.yy",
-      from = $( "#from" )
-      .datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 3
-      })
-      .on( "change", function() {
-        to.datepicker( "option", "minDate", getDate( this ) );
-      }),
-      to = $( "#to" ).datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 3
-      })
-      .on( "change", function() {
-      from.datepicker( "option", "maxDate", getDate( this ) );
-    });
-  
-    function getDate( element ) {
-      var date;
-      try {
-        date = $.datepicker.parseDate( dateFormat, element.value );
-      } catch( error ) {
-        date = null;
-      }
-  
-      return date;
-    }
-    $.datepicker.setDefaults($.datepicker.regional['ru']);
+  var dateFormat = "dd.mm.yy",
+    from = $( "#input1" )
+    .datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3
+    })
+    .on( "change", function() {
+      to.datepicker( "option", "minDate", getDate( this ) );
+    }),
+    to = $( "#input2" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3
+    })
+    .on( "change", function() {
+    from.datepicker( "option", "maxDate", getDate( this ) );
   });
+
+  function getDate( element ) {
+    var date;
+    try {
+      date = $.datepicker.parseDate( dateFormat, element.value );
+    } catch( error ) {
+      date = null;
+    }
+
+    return date;
+  }
+  $.datepicker.setDefaults($.datepicker.regional['ru']);
+});
+  
 
 
     
