@@ -531,7 +531,7 @@ button.btn__white.registration-btn {
   transform: translate(94px, -37px);
 }
 .find-room__subtitle.max {
-  padding-top: 1px;
+  padding-top: 20px;
 }
 
 .arrow__img_white {
@@ -543,29 +543,20 @@ button.btn__white.registration-btn {
 .ui-datepicker {
   padding: 5px 4px;
   background: white;
+  width: 320px;
   border: none;
-}
-.ui-datepicker .ui-datepicker-stay-duration {
-  color: #0d5264;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 17px;
-  margin-bottom: 8px;
 }
 .ui-datepicker .ui-datepicker-header {
   background: #fff;
   border: none;
-  padding-top: 12px;
-  padding-bottom: 9px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
   width: 33px;
   height: 33px;
-  left: 13px;
-  top: 10px;
+  left: 7px;
+  top: 22px;
   background: url(/arrow_back.81d852c4.svg) no-repeat;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
@@ -578,9 +569,10 @@ button.btn__white.registration-btn {
   display: none;
 }
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
-  right: 13px;
+  right: 9px;
   width: 33px;
   height: 33px;
+  top: 6px;
   background: url(/arrow_back.81d852c4.svg) no-repeat;
   transform: rotate(180deg);
 }
@@ -624,11 +616,17 @@ button.btn__white.registration-btn {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   opacity: 0.55;
 }
+.ui-datepicker .ui-datepicker-calendar .start {
+  background: linear-gradient(270deg, rgba(188, 156, 255, 0.6102415966) 42%, rgba(139, 164, 249, 0) 42%);
+}
 .ui-datepicker .ui-datepicker-calendar .start > a {
   position: relative;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: #fff;
   border-radius: 22px;
+}
+.ui-datepicker .ui-datepicker-calendar .end {
+  background: linear-gradient(91deg, rgba(188, 156, 255, 0.61) 42%, rgba(139, 164, 249, 0) 42%);
 }
 .ui-datepicker .ui-datepicker-calendar .end > a {
   position: relative;
@@ -640,7 +638,7 @@ button.btn__white.registration-btn {
   display: block;
   width: 100%;
   height: 100%;
-  line-height: 23px;
+  line-height: 28px;
   text-align: center;
   padding: 8px 0px 8px 0px;
   border: none;
@@ -650,10 +648,6 @@ button.btn__white.registration-btn {
   font-size: 12px;
   color: rgba(31, 32, 65, 0.5);
 }
-.ui-datepicker .ui-datepicker-calendar .ui-state-default:hover {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: #fff;
-}
 .ui-datepicker .ui-state-disabled .ui-state-default {
   font-size: 12px;
   line-height: 15px;
@@ -661,6 +655,13 @@ button.btn__white.registration-btn {
 }
 .ui-datepicker .ui-datepicker-other-month, .ui-datepicker .ui-datepicker-unselectable, .ui-datepicker .ui-state-disabled {
   opacity: 1;
+}
+.ui-datepicker .ui-datepicker-today .ui-state-highlight {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFFFFF;
 }
 
 .footer__top {

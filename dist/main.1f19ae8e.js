@@ -2481,7 +2481,7 @@ var $input_start_date = null,
 
 function getDateClass(date, start, end) {
   if (end != null && start != null) {
-    if (date > start && date < end) return [true, "sejour", "Séjour"];
+    if (date > start && date < end) return [true, "sejour", "День"];
   }
 
   if (date == start) return [true, "start", "Прибытие"];
@@ -2489,39 +2489,19 @@ function getDateClass(date, start, end) {
   return false;
 }
 
-function datepicker_draw_nb_nights() {
-  var $datepicker = jQuery("#ui-datepicker-div");
-  setTimeout(function () {
-    if (start_date != null && end_date != null) {
-      var $qty_days_stay = jQuery("<div />", {
-        class: "ui-datepicker-stay-duration"
-      });
-      var qty_nights_stay = get_days_difference(timestamp_start_date, timestamp_end_date);
-      $qty_days_stay.text(qty_nights_stay + " nights stay");
-      $qty_days_stay.appendTo($datepicker);
-    }
-  });
-}
-
 var options_start_date = {
   showAnim: false,
   constrainInput: true,
   numberOfMonths: 1,
   showOtherMonths: true,
-  beforeShow: function beforeShow(input, datepicker) {
-    datepicker_draw_nb_nights();
-  },
+  showButtonPanel: true,
   beforeShowDay: function beforeShowDay(date) {
-    // 0: published
-    // 1: class
-    // 2: tooltip
     var timestamp_date = date.getTime();
     var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
     if (result != false) return result;
-    return [true, "", ""]; // return [ true, "chocolate", "Chocolate! " ];
+    return [true, "", ""];
   },
   onSelect: function onSelect(date_string, datepicker) {
-    // this => input
     start_date = $input_start_date.datepicker("getDate");
     timestamp_start_date = start_date.getTime();
   },
@@ -2544,17 +2524,13 @@ var options_end_date = {
   constrainInput: true,
   numberOfMonths: 1,
   showOtherMonths: true,
-  beforeShow: function beforeShow(input, datepicker) {
-    datepicker_draw_nb_nights();
-  },
   beforeShowDay: function beforeShowDay(date) {
     var timestamp_date = date.getTime();
     var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
     if (result != false) return result;
-    return [true, "", "Chocolate !"];
+    return [true, "", "Клик"];
   },
   onSelect: function onSelect(date_string, datepicker) {
-    // this => input
     end_date = $input_end_date.datepicker("getDate");
     timestamp_end_date = end_date.getTime();
   },
@@ -2582,10 +2558,8 @@ function get_days_difference(start_date, end_date) {
   "use strict";
 
   if (typeof define === "function" && define.amd) {
-    // AMD. Register as an anonymous module.
     define(["../widgets/datepicker"], factory);
   } else {
-    // Browser globals
     factory(jQuery.datepicker);
   }
 })(function (datepicker) {
@@ -2639,7 +2613,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51545" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64578" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

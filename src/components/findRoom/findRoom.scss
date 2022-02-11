@@ -90,7 +90,7 @@
         transform: translate(94px, -37px);
     }
     &__subtitle.max {
-        padding-top: 1px;
+        padding-top: 20px;
     }
 }
 
@@ -102,28 +102,19 @@
 
 .ui-datepicker{
     padding: 5px 4px;
-    background: white;		
+    background: white;	
+    width: 320px;	
     border: none;		
-    .ui-datepicker-stay-duration{
-        color: #0d5264;
-        font-family: "Lato", sans-serif;
-        font-size: 14px;
-        font-weight: 900;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 17px;
-        margin-bottom: 8px;
-    }
     .ui-datepicker-header{
         background: #fff;
         border: none;
-        padding-top: 12px;
-        padding-bottom: 9px;
+        padding-top: 20px;
+        padding-bottom: 30px;
         .ui-datepicker-prev{
             width: 33px;
             height: 33px;
-            left: 13px;
-            top: 10px;
+            left: 7px;
+            top: 22px;
             background: url(./img/arrow_back.svg) no-repeat;
         }
         .ui-datepicker-prev,
@@ -135,9 +126,10 @@
             }
         }
         .ui-datepicker-next{
-            right: 13px;
+            right: 9px;
             width: 33px;
             height: 33px;
+            top: 6px;
             background: url(./img/arrow_back.svg) no-repeat;
             transform: rotate(180deg);
         }
@@ -157,6 +149,7 @@
             }
         }
     }
+    
     .ui-datepicker-group{
         margin: 0 2px;
         width: calc(50% - 4px)!important;
@@ -184,7 +177,7 @@
             }
         }
         .start{
-            
+            background: linear-gradient(270deg, rgba(188,156,255,0.6102415966386555) 42%, rgba(139,164,249,0) 42%);
             > a{
                 position: relative;
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -193,6 +186,7 @@
             }
         }
         .end{
+            background: linear-gradient(91deg, rgba(188,156,255,0.61) 42%, rgba(139,164,249,0) 42%);
             > a{
                 position: relative;
                 background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -204,7 +198,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            line-height: 23px;
+            line-height: 28px;
             text-align: center;
             padding: 8px 0px 8px 0px;
             border: none;
@@ -213,10 +207,6 @@
             font-size: 13px;
             font-size: 12px;
             color: rgba(31, 32, 65, 0.5);
-            &:hover{
-                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-                color: #fff;
-            }
         }
     }
     .ui-state-disabled {
@@ -229,4 +219,14 @@
     .ui-datepicker-other-month, .ui-datepicker-unselectable, .ui-state-disabled {
         opacity: 1;
     }
+    .ui-datepicker-today{
+        .ui-state-highlight{
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 22px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #FFFFFF;
+        }
+    }
+    
 }
