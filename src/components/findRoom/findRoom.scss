@@ -38,6 +38,8 @@
         border: 1px solid rgba(31, 32, 65, 0.25);
         box-sizing: border-box;
         border-radius: 4px;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
     }
     #numberguests {
         margin-top: 5px;
@@ -101,6 +103,7 @@
 }
 
 .ui-datepicker{
+    font-family: 'Montserrat';
     padding: 5px 4px;
     background: white;	
     width: 320px;	
@@ -228,5 +231,20 @@
             color: #FFFFFF;
         }
     }
-    
+    .ui-widget-content .ui-state-default {
+        font-family: 'Montserrat';
+        border: none;
+        background: #fff;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #BC9CFF;
+    }
+    .ui-widget-content {
+        border: none;
+        background: #fff;
+    }
+    img .ui-datepicker-trigger {
+        position: absolute;
+    }
 }

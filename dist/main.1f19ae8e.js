@@ -2434,7 +2434,9 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.scss":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"img/arrow_down.svg":[function(require,module,exports) {
+module.exports = "/arrow_down.3d6b8982.svg";
+},{}],"main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -2446,6 +2448,8 @@ var define;
 var _nouislider = _interopRequireDefault(require("nouislider"));
 
 require("nouislider/dist/nouislider.css");
+
+var _arrow_down = _interopRequireDefault(require("./img/arrow_down.svg"));
 
 require("./main.scss");
 
@@ -2463,7 +2467,7 @@ var swiper = new Swiper(".swiper", {
 var slider = document.getElementById('slider');
 
 _nouislider.default.create(slider, {
-  start: [20, 80],
+  start: [30, 70],
   connect: true,
   range: {
     'min': 0,
@@ -2495,6 +2499,10 @@ var options_start_date = {
   numberOfMonths: 1,
   showOtherMonths: true,
   showButtonPanel: true,
+  // showOn: "button",
+  // buttonImage: arrowDown,
+  // buttonImageOnly: true,
+  // buttonText: "Select date",
   beforeShowDay: function beforeShowDay(date) {
     var timestamp_date = date.getTime();
     var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
@@ -2524,6 +2532,11 @@ var options_end_date = {
   constrainInput: true,
   numberOfMonths: 1,
   showOtherMonths: true,
+  showButtonPanel: true,
+  // showOn: "button",
+  // buttonImage: arrowDown,
+  // buttonImageOnly: true,
+  // buttonText: "Select date",
   beforeShowDay: function beforeShowDay(date) {
     var timestamp_date = date.getTime();
     var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
@@ -2566,7 +2579,7 @@ function get_days_difference(start_date, end_date) {
   "use strict";
 
   datepicker.regional.ru = {
-    closeText: "Закрыть",
+    closeText: "Применить",
     prevText: "&#x3C;Пред",
     nextText: "След&#x3E;",
     currentText: "Сегодня",
@@ -2585,7 +2598,7 @@ function get_days_difference(start_date, end_date) {
   datepicker.setDefaults(datepicker.regional.ru);
   return datepicker.regional.ru;
 });
-},{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./main.scss":"main.scss"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./img/arrow_down.svg":"img/arrow_down.svg","./main.scss":"main.scss"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2613,7 +2626,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64578" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57905" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

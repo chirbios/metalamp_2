@@ -1,5 +1,6 @@
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
+import arrowDown from './img/arrow_down.svg'
 
 import './main.scss';
 // Swiper
@@ -15,7 +16,7 @@ const swiper = new Swiper(".swiper", {
 var slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [30, 70],
     connect: true,
     range: {
         'min': 0,
@@ -24,6 +25,8 @@ noUiSlider.create(slider, {
 });
 
 //datepicker
+
+
 
 var start_date = null, end_date = null;
 var timestamp_start_date = null, timestamp_end_date = null;
@@ -49,6 +52,10 @@ var options_start_date = {
   	numberOfMonths: 1,
 	showOtherMonths: true,
 	showButtonPanel: true,
+	// showOn: "button",
+	// buttonImage: arrowDown,
+    // buttonImageOnly: true,
+    // buttonText: "Select date",
 	beforeShowDay: function(date){
 		var timestamp_date = date.getTime();
 		var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
@@ -80,6 +87,11 @@ var options_end_date = {
 	constrainInput: true,
   	numberOfMonths: 1,
 	showOtherMonths: true,
+	showButtonPanel: true,
+	// showOn: "button",
+	// buttonImage: arrowDown,
+    // buttonImageOnly: true,
+    // buttonText: "Select date",
 	beforeShowDay: function(date){
 		var timestamp_date = date.getTime();
 		var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
@@ -106,7 +118,6 @@ var options_end_date = {
 };
 
 
-
 $input_start_date = jQuery("#start-date");
 $input_end_date = jQuery("#end-date");
 
@@ -131,7 +142,7 @@ function get_days_difference(start_date, end_date){
 "use strict";
 
 datepicker.regional.ru = {
-	closeText: "Закрыть",
+	closeText: "Применить",
 	prevText: "&#x3C;Пред",
 	nextText: "След&#x3E;",
 	currentText: "Сегодня",
@@ -153,7 +164,6 @@ datepicker.setDefaults( datepicker.regional.ru );
 return datepicker.regional.ru;
 
 } );
-
 
 
     
