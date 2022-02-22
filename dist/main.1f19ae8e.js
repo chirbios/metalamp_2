@@ -2597,7 +2597,53 @@ function get_days_difference(start_date, end_date) {
   };
   datepicker.setDefaults(datepicker.regional.ru);
   return datepicker.regional.ru;
-});
+}); //dropdown 
+
+
+var count = 1;
+var countEl = document.getElementById("count");
+
+function plusOld() {
+  count++;
+  countEl.value = count;
+}
+
+function minusOld() {
+  if (count > 1) {
+    count--;
+    countEl.value = count;
+  }
+}
+
+var countA = 1;
+var countEle = document.getElementById("count1");
+
+function plusYoung() {
+  countA++;
+  countEle.value = countA;
+}
+
+function minusYoung() {
+  if (countA > 1) {
+    countA--;
+    countEle.value = countA;
+  }
+}
+
+var countB = 1;
+var countElem = document.getElementById("count2");
+
+function plusChild() {
+  countB++;
+  countElem.value = countB;
+}
+
+function minusChild() {
+  if (countB > 1) {
+    countB--;
+    countElem.value = countB;
+  }
+}
 },{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./img/arrow_down.svg":"img/arrow_down.svg","./main.scss":"main.scss"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -2626,7 +2672,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57905" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54525" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

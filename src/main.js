@@ -166,4 +166,50 @@ return datepicker.regional.ru;
 } );
 
 
-    
+//dropdown 
+var count = 1;
+var countEl = document.getElementById("count");
+
+function plusOld(){
+  count++;
+  countEl.value = count;
+}
+
+function minusOld(){
+  if (count > 1) {
+    count--;
+    countEl.value = count;
+  }  
+}
+
+var countA = 1;
+var countEle = document.getElementById("count1");
+
+function plusYoung(){
+  countA++;
+  countEle.value = countA;
+}
+
+function minusYoung(){
+  if (countA > 1) {
+    countA--;
+    countEle.value = countA;
+  }  
+}
+
+var countB = 1;
+var countElem = document.getElementById("count2");
+
+function plusChild(){
+  countB++;
+  countElem.value = countB;
+}
+
+function minusChild(){
+  if (countB > 1) {
+    countB--;
+    countElem.value = countB;
+  }  
+}
+
+  
