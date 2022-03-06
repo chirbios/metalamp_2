@@ -9,7 +9,7 @@
                     id="start-date" 
                     placeholder="ДД.ММ.ГГГГ"
                     )
-                .arrow__down
+                //- .arrow__down
             .find-room__subtitle выезд
                 input(
                     type="text" 
@@ -17,8 +17,28 @@
                     id="end-date" 
                     placeholder="ДД.ММ.ГГГГ"
                     )
-                .arrow__down
-            
+            .find-room__subtitle гости
+                main
+                    .wrapper
+                        .guests__wrapper 
+                            .guests__number(data-number="0")
+                            .js-show-drop-down Гостей
+                        .drop-down
+                            .guests__field
+                                .find-room__subtitle взрослые
+                                .js-plus-btn +
+                                .input-area(data-value="0") 
+                                .js-minus-btn -
+                            .guests__field
+                                .find-room__subtitle дети
+                                .js-plus-btn +
+                                .input-area(data-value="0")
+                                .js-minus-btn -
+                            .guests__field
+                                .find-room__subtitle младенцы
+                                .js-plus-btn +
+                                .input-area(data-value="0")
+                                .js-minus-btn -
         .arrow__img_white 
             span.material-icons-outlined.material-icons.md-24.white  arrow_forward
         button.find-room__btn Подобрать номер

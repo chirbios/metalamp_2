@@ -679,9 +679,6 @@ button.btn__white.registration-btn {
   border: none;
   background: #fff;
 }
-.ui-datepicker img .ui-datepicker-trigger {
-  position: absolute;
-}
 
 .dropdown {
   position: relative;
@@ -752,6 +749,82 @@ button.btn__white.registration-btn {
 .dropdown .options div:hover {
   background: #62baea;
   color: #fff;
+}
+
+.ui-datepicker-trigger {
+  transform: translate(122px, -32px);
+  cursor: pointer;
+}
+
+main {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 320px;
+}
+
+.input-area {
+  width: 50px;
+  height: 25px;
+}
+
+.guests__field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drop-down-btn {
+  cursor: pointer;
+}
+
+.drop-down {
+  display: none;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top: none;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.guests__wrapper {
+  margin-top: 5px;
+  padding: 13px 0px 13px 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+}
+
+.js-show-drop-down {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.js-plus-btn, .js-minus-btn {
+  cursor: pointer;
+  padding: 0px 6px 0px 6px;
+  border: 1px solid;
+  border-color: rgba(31, 32, 65, 0.5);
+  border-radius: 50%;
+  background: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.js-minus-btn {
+  padding: 0px 8px 0px 8px;
 }
 
 .footer__top {

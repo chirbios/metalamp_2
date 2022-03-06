@@ -2441,9 +2441,42 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+},{"./fonts\\Montserrat-Regular.eot":[["Montserrat-Regular.21b801b8.eot","fonts/Montserrat-Regular.eot"],"fonts/Montserrat-Regular.eot"],"./fonts\\Montserrat-Regular.woff":[["Montserrat-Regular.1b35f2ae.woff","fonts/Montserrat-Regular.woff"],"fonts/Montserrat-Regular.woff"],"./fonts\\Montserrat-Regular.ttf":[["Montserrat-Regular.44e710c1.ttf","fonts/Montserrat-Regular.ttf"],"fonts/Montserrat-Regular.ttf"],"./fonts\\Montserrat-Regular.svg":[["Montserrat-Regular.6f6bdac5.svg","fonts/Montserrat-Regular.svg"],"fonts/Montserrat-Regular.svg"],"./fonts\\Montserrat-Bold.eot":[["Montserrat-Bold.70d570c7.eot","fonts/Montserrat-Bold.eot"],"fonts/Montserrat-Bold.eot"],"./fonts\\Montserrat-Bold.woff":[["Montserrat-Bold.73e94c2c.woff","fonts/Montserrat-Bold.woff"],"fonts/Montserrat-Bold.woff"],"./fonts\\Montserrat-Bold.ttf":[["Montserrat-Bold.f3410305.ttf","fonts/Montserrat-Bold.ttf"],"fonts/Montserrat-Bold.ttf"],"./fonts\\Montserrat-Bold.svg":[["Montserrat-Bold.0fff2121.svg","fonts/Montserrat-Bold.svg"],"fonts/Montserrat-Bold.svg"],"C:\\Users\\ALEX\\Desktop\\js\\metalab_2\\src\\img\\bg_landingPage.jpg":[["bg_landingPage.6144e723.jpg","img/bg_landingPage.jpg"],"img/bg_landingPage.jpg"],"./img\\arrow_back.svg":[["arrow_back.81d852c4.svg","img/arrow_back.svg"],"img/arrow_back.svg"],"./img\\Group 9.jpg":[["Group 9.b522bcb3.jpg","img/Group 9.jpg"],"img/Group 9.jpg"],"./img\\registration.jpg":[["registration.057b9a19.jpg","img/registration.jpg"],"img/registration.jpg"],"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/findRoom/findRoom.js":[function(require,module,exports) {
+//dropdown
+'use strict';
+
+$(document).ready(function dropdown() {
+  var guestsNumber = $('.guests__number'),
+      showDropDown = $('.js-show-drop-down'),
+      blockDropDown = $('.drop-down'),
+      inputArea = $('.input-area'),
+      btnPlus = $('.js-plus-btn'),
+      btnMinus = $('.js-minus-btn');
+  showDropDown.on('click tap', function () {
+    blockDropDown.toggle('show');
+  });
+  guestsNumber.each(function (index, item) {
+    var dataValue = inputArea.attr('data-value');
+  });
+  inputArea.each(function (index, item) {
+    item.innerHTML = $(item).attr('data-value');
+  });
+  btnPlus.on('click tap', function () {
+    var inputArea = $(this).closest('.guests__field').find('.input-area');
+    var dataValue = inputArea.attr('data-value');
+    inputArea.attr('data-value', Number(dataValue) + 1);
+    inputArea.text(Number(dataValue) + 1);
+  });
+  btnMinus.on('click tap', function () {
+    var inputArea = $(this).closest('.guests__field').find('.input-area');
+    var dataValue = inputArea.attr('data-value');
+    inputArea.attr('data-value', Number(dataValue) - 1);
+    inputArea.text(Number(dataValue) - 1);
+  });
+});
+},{}],"main.js":[function(require,module,exports) {
 var define;
-"use strict";
+'use strict';
 
 var _nouislider = _interopRequireDefault(require("nouislider"));
 
@@ -2453,198 +2486,156 @@ var _arrow_down = _interopRequireDefault(require("./img/arrow_down.svg"));
 
 require("./main.scss");
 
+var _findRoom = _interopRequireDefault(require("./components/findRoom/findRoom.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Swiper
-var swiper = new Swiper(".swiper", {
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+$(document).ready(function () {
+  // Swiper
+  var swiper = new Swiper(".swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  }); //search room slider
+
+  var slider = document.getElementById('slider');
+
+  _nouislider.default.create(slider, {
+    start: [30, 70],
+    connect: true,
+    range: {
+      'min': 0,
+      'max': 100
+    }
+  }); //datepicker
+
+
+  var start_date = null,
+      end_date = null;
+  var timestamp_start_date = null,
+      timestamp_end_date = null;
+  var $input_start_date = null,
+      $input_end_date = null;
+
+  function getDateClass(date, start, end) {
+    if (end != null && start != null) {
+      if (date > start && date < end) return [true, "sejour", "День"];
+    }
+
+    if (date == start) return [true, "start", "Прибытие"];
+    if (date == end) return [true, "end", "Выезд"];
+    return false;
   }
-}); //search room slider
 
-var slider = document.getElementById('slider');
+  var options_start_date = {
+    showAnim: false,
+    constrainInput: true,
+    numberOfMonths: 1,
+    showOtherMonths: true,
+    showButtonPanel: true,
+    showOn: "button",
+    buttonImage: _arrow_down.default,
+    buttonImageOnly: true,
+    buttonText: "Select date",
+    beforeShowDay: function beforeShowDay(date) {
+      var timestamp_date = date.getTime();
+      var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
+      if (result != false) return result;
+      return [true, "", ""];
+    },
+    onSelect: function onSelect(date_string, datepicker) {
+      start_date = $input_start_date.datepicker("getDate");
+      timestamp_start_date = start_date.getTime();
+    },
+    onClose: function onClose() {
+      if (end_date != null) {
+        if (timestamp_start_date >= timestamp_end_date || end_date == null) {
+          $input_end_date.datepicker("setDate", null);
+          end_date = null;
+          timestamp_end_date = null;
+          $input_end_date.datepicker("show");
+          return;
+        }
+      }
 
-_nouislider.default.create(slider, {
-  start: [30, 70],
-  connect: true,
-  range: {
-    'min': 0,
-    'max': 100
-  }
-}); //datepicker
+      if (start_date != null && end_date == null) $input_end_date.datepicker("show");
+    }
+  };
+  var options_end_date = {
+    showAnim: false,
+    constrainInput: true,
+    numberOfMonths: 1,
+    showOtherMonths: true,
+    showButtonPanel: true,
+    showOn: "button",
+    buttonImage: _arrow_down.default,
+    buttonImageOnly: true,
+    buttonText: "Select date",
+    beforeShowDay: function beforeShowDay(date) {
+      var timestamp_date = date.getTime();
+      var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
+      if (result != false) return result;
+      return [true, "", "Клик"];
+    },
+    onSelect: function onSelect(date_string, datepicker) {
+      end_date = $input_end_date.datepicker("getDate");
+      timestamp_end_date = end_date.getTime();
+    },
+    onClose: function onClose() {
+      if (end_date == null) return;
 
-
-var start_date = null,
-    end_date = null;
-var timestamp_start_date = null,
-    timestamp_end_date = null;
-var $input_start_date = null,
-    $input_end_date = null;
-
-function getDateClass(date, start, end) {
-  if (end != null && start != null) {
-    if (date > start && date < end) return [true, "sejour", "День"];
-  }
-
-  if (date == start) return [true, "start", "Прибытие"];
-  if (date == end) return [true, "end", "Выезд"];
-  return false;
-}
-
-var options_start_date = {
-  showAnim: false,
-  constrainInput: true,
-  numberOfMonths: 1,
-  showOtherMonths: true,
-  showButtonPanel: true,
-  // showOn: "button",
-  // buttonImage: arrowDown,
-  // buttonImageOnly: true,
-  // buttonText: "Select date",
-  beforeShowDay: function beforeShowDay(date) {
-    var timestamp_date = date.getTime();
-    var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
-    if (result != false) return result;
-    return [true, "", ""];
-  },
-  onSelect: function onSelect(date_string, datepicker) {
-    start_date = $input_start_date.datepicker("getDate");
-    timestamp_start_date = start_date.getTime();
-  },
-  onClose: function onClose() {
-    if (end_date != null) {
-      if (timestamp_start_date >= timestamp_end_date || end_date == null) {
-        $input_end_date.datepicker("setDate", null);
-        end_date = null;
-        timestamp_end_date = null;
-        $input_end_date.datepicker("show");
-        return;
+      if (timestamp_end_date <= timestamp_start_date || start_date == null) {
+        $input_start_date.datepicker("setDate", null);
+        start_date = null;
+        timestamp_start_date = null;
+        $input_start_date.datepicker("show");
       }
     }
-
-    if (start_date != null && end_date == null) $input_end_date.datepicker("show");
-  }
-};
-var options_end_date = {
-  showAnim: false,
-  constrainInput: true,
-  numberOfMonths: 1,
-  showOtherMonths: true,
-  showButtonPanel: true,
-  // showOn: "button",
-  // buttonImage: arrowDown,
-  // buttonImageOnly: true,
-  // buttonText: "Select date",
-  beforeShowDay: function beforeShowDay(date) {
-    var timestamp_date = date.getTime();
-    var result = getDateClass(timestamp_date, timestamp_start_date, timestamp_end_date);
-    if (result != false) return result;
-    return [true, "", "Клик"];
-  },
-  onSelect: function onSelect(date_string, datepicker) {
-    end_date = $input_end_date.datepicker("getDate");
-    timestamp_end_date = end_date.getTime();
-  },
-  onClose: function onClose() {
-    if (end_date == null) return;
-
-    if (timestamp_end_date <= timestamp_start_date || start_date == null) {
-      $input_start_date.datepicker("setDate", null);
-      start_date = null;
-      timestamp_start_date = null;
-      $input_start_date.datepicker("show");
-    }
-  }
-};
-$input_start_date = jQuery("#start-date");
-$input_end_date = jQuery("#end-date");
-$input_start_date.datepicker(options_start_date);
-$input_end_date.datepicker(options_end_date);
-
-function get_days_difference(start_date, end_date) {
-  return Math.floor(end_date - start_date) / (1000 * 60 * 60 * 24);
-}
-
-(function (factory) {
-  "use strict";
-
-  if (typeof define === "function" && define.amd) {
-    define(["../widgets/datepicker"], factory);
-  } else {
-    factory(jQuery.datepicker);
-  }
-})(function (datepicker) {
-  "use strict";
-
-  datepicker.regional.ru = {
-    closeText: "Применить",
-    prevText: "&#x3C;Пред",
-    nextText: "След&#x3E;",
-    currentText: "Сегодня",
-    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-    monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
-    dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
-    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
-    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-    weekHeader: "Нед",
-    dateFormat: "dd.mm.yy",
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: ""
   };
-  datepicker.setDefaults(datepicker.regional.ru);
-  return datepicker.regional.ru;
-}); //dropdown 
+  $input_start_date = jQuery("#start-date");
+  $input_end_date = jQuery("#end-date");
+  $input_start_date.datepicker(options_start_date);
+  $input_end_date.datepicker(options_end_date);
 
-
-var count = 1;
-var countEl = document.getElementById("count");
-
-function plusOld() {
-  count++;
-  countEl.value = count;
-}
-
-function minusOld() {
-  if (count > 1) {
-    count--;
-    countEl.value = count;
+  function get_days_difference(start_date, end_date) {
+    return Math.floor(end_date - start_date) / (1000 * 60 * 60 * 24);
   }
-}
 
-var countA = 1;
-var countEle = document.getElementById("count1");
+  (function (factory) {
+    "use strict";
 
-function plusYoung() {
-  countA++;
-  countEle.value = countA;
-}
+    if (typeof define === "function" && define.amd) {
+      define(["../widgets/datepicker"], factory);
+    } else {
+      factory(jQuery.datepicker);
+    }
+  })(function (datepicker) {
+    "use strict";
 
-function minusYoung() {
-  if (countA > 1) {
-    countA--;
-    countEle.value = countA;
-  }
-}
-
-var countB = 1;
-var countElem = document.getElementById("count2");
-
-function plusChild() {
-  countB++;
-  countElem.value = countB;
-}
-
-function minusChild() {
-  if (countB > 1) {
-    countB--;
-    countElem.value = countB;
-  }
-}
-},{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./img/arrow_down.svg":"img/arrow_down.svg","./main.scss":"main.scss"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+    datepicker.regional.ru = {
+      closeText: "Применить",
+      prevText: "&#x3C;Пред",
+      nextText: "След&#x3E;",
+      currentText: "Сегодня",
+      monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+      monthNamesShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+      dayNames: ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"],
+      dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+      dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+      weekHeader: "Нед",
+      dateFormat: "dd.mm.yy",
+      firstDay: 1,
+      isRTL: false,
+      showMonthAfterYear: false,
+      yearSuffix: ""
+    };
+    datepicker.setDefaults(datepicker.regional.ru);
+    return datepicker.regional.ru;
+  });
+});
+},{"nouislider":"../node_modules/nouislider/dist/nouislider.js","nouislider/dist/nouislider.css":"../node_modules/nouislider/dist/nouislider.css","./img/arrow_down.svg":"img/arrow_down.svg","./main.scss":"main.scss","./components/findRoom/findRoom.js":"components/findRoom/findRoom.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2672,7 +2663,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54765" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54605" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
